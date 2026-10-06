@@ -117,11 +117,17 @@ def main():
     rows = []
     for i, (model, cond, start, rep) in enumerate(plan):
         user = task["prompt"] + "\n\n" + task["notes"] + ("\n" + task["starts"][start] if task["starts"][start] else "")
-        try:
-            text, usage, dt, meta = call(model, base if cond == "base" else "", user, cond == "think")
-            err = None
-        except Exception as e:
-            text, usage, dt, meta, err = "", {}, 0.0, {}, str(e)[:300]
+        err = None
+        for attempt in range(2):   # one retry after a pause when the provider is overloaded or rate-limited
+            try:
+                text, usage, dt, meta = call(model, base if cond == "base" else "", user, cond == "think")
+                err = None
+                break
+            except Exception as e:
+                text, usage, dt, meta, err = "", {}, 0.0, {}, str(e)[:300]
+                if not ("HTTP 429" in err or "HTTP 503" in err) or attempt:
+                    break
+                time.sleep(30)
         res = checks.run(text) if not err else {}
         row = {"model": model, "condition": cond, "start": start, "rep": rep, "latency_s": round(dt, 2),
                "tokens": usage.get("total_tokens"), "error": err, **meta,
