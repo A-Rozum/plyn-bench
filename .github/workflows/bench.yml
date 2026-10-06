@@ -1,0 +1,38 @@
+name: bench
+on:
+  workflow_dispatch:
+    inputs:
+      task: {description: "task folder", default: "meeting-actions"}
+      base: {description: "base folder", default: "minimal"}
+      models: {description: "comma-separated model ids", default: "openai/gpt-4.1-mini,meta/llama-3.3-70b-instruct"}
+      reps: {description: "repetitions per cell", default: "3"}
+      max_calls: {description: "hard cap on model calls", default: "40"}
+permissions:
+  contents: write
+  models: read
+concurrency: {group: bench, cancel-in-progress: false}
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pyyaml
+      - name: run
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TASK: ${{ inputs.task }}
+          BASE: ${{ inputs.base }}
+          MODELS: ${{ inputs.models }}
+          REPS: ${{ inputs.reps }}
+          MAX_CALLS: ${{ inputs.max_calls }}
+        run: python bench/run.py
+      - name: commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results
+          git commit -m "results: ${{ inputs.task }} / ${{ inputs.base }}" || echo "nothing to commit"
+          git push

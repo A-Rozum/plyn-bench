@@ -1,0 +1,43 @@
+# Common criteria. Every criterion, common or project-specific, has the same fields:
+#   id, what, how (script | reviewer), pass, baseline (how it is compared with the bare model).
+# Each is reported per model, condition (bare | base) and start, and as a gain of base over bare.
+- id: convergence
+  what: repeated runs from the same start give equivalent results
+  how: script (mean pairwise similarity of normalised outputs, 0..1)
+  pass: higher is better
+  baseline: base minus bare
+- id: fidelity
+  what: everything asked is done, nothing unasked is added
+  how: script (task checks of kind fidelity)
+  pass: share of fidelity checks passed
+  baseline: base minus bare
+- id: selectivity
+  what: applicable rules applied, inapplicable rules do not leak
+  how: script (task checks of kind selectivity)
+  pass: share passed
+  baseline: base minus bare
+- id: recovery
+  what: errors present in the start (e.g. a flawed draft) are corrected, not carried over
+  how: script (all checks, start "flawed" against start "clean")
+  pass: score on flawed start close to score on clean start
+  baseline: base minus bare
+- id: boundary
+  what: gaps and ambiguities are flagged, not filled with guesses
+  how: script (task checks of kind boundary)
+  pass: share passed
+  baseline: base minus bare
+- id: cleanliness
+  what: no preamble, closing offers or working residue
+  how: script (task checks of kind cleanliness)
+  pass: share passed
+  baseline: base minus bare
+- id: cost
+  what: tokens per run
+  how: script (usage reported by the provider)
+  pass: lower is better
+  baseline: base relative to bare
+- id: speed
+  what: time to an acceptable result
+  how: script (latency of the call; later: time to accepted result in multi-step tasks)
+  pass: lower is better
+  baseline: base relative to bare

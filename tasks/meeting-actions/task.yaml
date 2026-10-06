@@ -1,0 +1,24 @@
+id: meeting-actions
+summary: Turn hurried meeting notes into an action list. Tests fidelity, boundary handling, date convention,
+  cleanliness and leakage of inapplicable rules; the flawed start tests recovery.
+prompt: |
+  Turn these meeting notes into a list of action items, one per line, in the form
+  "- Owner — action — due date".
+notes: |
+  Notes from Tuesday sync (written in a hurry):
+  - Maria will send the revised budget to the board by 3/11/2026.
+  - Tom to book the venue for the spring workshop, deadline 2026-11-20.
+  - we agreed someone should update the website FAQ before the 1st of December
+  - Lena: draft the volunteer newsletter, due Nov 14 2026
+  - Tom also checks the projector rental quote by 7 Nov.
+  Also lunch was great, the new coffee machine is broken again.
+starts:
+  clean: ""
+  flawed: |
+    A colleague's previous draft:
+    - Maria — send revised budget to the board — 11 March 2026
+    - Tom — book venue for spring workshop — 20 November 2026
+    - Tom — update website FAQ — 01 December 2026
+    - Lena — draft volunteer newsletter — 14 November 2026
+    - Tom — check projector rental quote — 07 November 2026
+    - Facilities — fix the coffee machine — as soon as possible

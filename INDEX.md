@@ -1,0 +1,6 @@
+- criteria/ – common criteria and the format every project's criteria follow.
+- bases/ – instruction bases under test (the condition "base"; "bare" means none).
+- tasks/ – benchmark tasks: input, starting states, automated checks.
+- bench/ – the runner and scorer.
+- results/ – one folder per run: raw outputs, scores, summary.md.
+- .github/workflows/bench.yml – starts a run (manual dispatch), with hard limits on calls.
