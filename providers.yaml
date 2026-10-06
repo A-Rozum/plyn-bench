@@ -7,4 +7,4 @@ groq:       {model: openai/gpt-oss-120b, access: free tier, notes: "firewall nee
 cohere:     {model: command-a-03-2025, access: trial key, notes: "reasoning needs a separate reasoning model"}
 qwen:       {model: qwen-plus-character, access: free quota, expires: 2027-01-04, notes: "Alibaba Model Studio, Singapore; quota activated 2026-10-06 for 90 days"}
 hf:         {model: openai/gpt-oss-20b, access: free monthly credits, notes: "Hugging Face router; picks a hosting provider unless pinned"}
-nvidia:     {model: meta/llama-3.3-70b-instruct, access: free developer access, notes: "build.nvidia.com"}
+nvidia:     {model: nvidia/llama-3.1-nemotron-ultra-253b-v1, access: free developer access, notes: "build.nvidia.com; also hosts Mistral models (mistral-large and others)"}
