@@ -1,0 +1,638 @@
+[
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "bare",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 1.93,
+  "tokens": 258,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": false
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "bare",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 1.22,
+  "tokens": 253,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": false
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "bare",
+  "start": "flawed",
+  "rep": 0,
+  "latency_s": 0.85,
+  "tokens": 365,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": false
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "bare",
+  "start": "flawed",
+  "rep": 1,
+  "latency_s": 0.81,
+  "tokens": 365,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": false
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "think",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 3.46,
+  "tokens": 1239,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "high"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": false
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "think",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 4.2,
+  "tokens": 1644,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "high"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": false
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "think",
+  "start": "flawed",
+  "rep": 0,
+  "latency_s": 6.28,
+  "tokens": 2248,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "high"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "think",
+  "start": "flawed",
+  "rep": 1,
+  "latency_s": 5.63,
+  "tokens": 2032,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "high"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "base",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 1.07,
+  "tokens": 447,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "base",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.96,
+  "tokens": 446,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "base",
+  "start": "flawed",
+  "rep": 0,
+  "latency_s": 0.87,
+  "tokens": 558,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "base",
+  "start": "flawed",
+  "rep": 1,
+  "latency_s": 0.81,
+  "tokens": 558,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ }
+]
