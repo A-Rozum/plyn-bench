@@ -9,7 +9,7 @@ PROVIDERS = {
     "openrouter": {"base": "https://openrouter.ai/api/v1", "key": "OPENROUTER_API_KEY"},
 }
 MAX_CALLS = int(os.environ.get("MAX_CALLS", "40"))
-MAX_TOKENS = int(os.environ.get("MAX_TOKENS", "700"))
+MAX_TOKENS = int(os.environ.get("MAX_TOKENS", "4000"))
 PAUSE = float(os.environ.get("PAUSE", "13"))
 REPS = int(os.environ.get("REPS", "3"))
 TASK = os.environ.get("TASK", "meeting-actions")
@@ -59,7 +59,10 @@ def call(model, system, user):
     p, name = split(model)
     r = http(p["base"] + "/chat/completions", {"model": name, "messages": msgs, "max_tokens": MAX_TOKENS}, headers(p))
     dt = time.time() - t0
-    return r["choices"][0]["message"]["content"] or "", r.get("usage", {}), dt
+    ch = r["choices"][0]
+    if ch.get("finish_reason") == "length":
+        raise RuntimeError("truncated: output hit MAX_TOKENS (thinking tokens count too)")
+    return ch["message"]["content"] or "", r.get("usage", {}), dt
 
 def sim(a, b):
     norm = lambda t: "\n".join(sorted(l.strip().lower() for l in t.splitlines() if l.strip()))
