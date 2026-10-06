@@ -1,6 +1,7 @@
 # Common criteria. Every criterion, common or project-specific, has the same fields:
 #   id, what, how (script | reviewer), pass, baseline (how it is compared with the bare model).
-# Each is reported per model, condition (bare | base) and start, and as a gain of base over bare.
+# Each is reported per model, condition and start, and as a gain over bare.
+# Conditions, same model: bare (reasoning off), think (provider's reasoning on), base (our base, reasoning off).
 - id: convergence
   what: repeated runs from the same start give equivalent results
   how: script (mean pairwise similarity of normalised outputs, 0..1)

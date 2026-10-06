@@ -7,7 +7,21 @@ import yaml
 PROVIDERS = {
     "gemini": {"base": "https://generativelanguage.googleapis.com/v1beta/openai", "key": "GEMINI_API_KEY"},
     "openrouter": {"base": "https://openrouter.ai/api/v1", "key": "OPENROUTER_API_KEY"},
+    "zai": {"base": "https://api.z.ai/api/paas/v4", "key": "ZAI_API_KEY"},
 }
+
+# Conditions: the same model three ways. "bare" and "base" run with reasoning off; "think" with it on.
+CONDITIONS = [c.strip() for c in os.environ.get("CONDITIONS", "bare,think,base").split(",") if c.strip()]
+
+def reasoning_variants(provider, on):
+    """Request parameters that switch reasoning on or off, tried in order until one is accepted."""
+    if provider == "gemini":
+        return [{"reasoning_effort": "high"}] if on else [{"reasoning_effort": e} for e in ("none", "minimal", "low")]
+    if provider == "openrouter":
+        return [{"reasoning": {"effort": "high"}}] if on else [{"reasoning": {"enabled": False}}, {"reasoning": {"effort": "low"}}]
+    if provider == "zai":
+        return [{"thinking": {"type": "enabled"}}] if on else [{"thinking": {"type": "disabled"}}]
+    return [{}]
 MAX_CALLS = int(os.environ.get("MAX_CALLS", "40"))
 MAX_TOKENS = int(os.environ.get("MAX_TOKENS", "4000"))
 PAUSE = float(os.environ.get("PAUSE", "13"))
@@ -53,16 +67,31 @@ def catalog_ids():
             print("catalog unavailable for", name, e)
     return ids or None
 
-def call(model, system, user):
+def call(model, system, user, think):
     msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": user}]
-    t0 = time.time()
     p, name = split(model)
-    r = http(p["base"] + "/chat/completions", {"model": name, "messages": msgs, "max_tokens": MAX_TOKENS}, headers(p))
-    dt = time.time() - t0
+    prov = model.split("/", 1)[0]
+    last = None
+    for extra in reasoning_variants(prov, think):
+        t0 = time.time()
+        try:
+            r = http(p["base"] + "/chat/completions", {"model": name, "messages": msgs, "max_tokens": MAX_TOKENS, **extra}, headers(p))
+        except RuntimeError as e:
+            last = e
+            if "HTTP 400" in str(e):
+                continue          # this way of switching reasoning is not accepted; try the next
+            raise
+        dt = time.time() - t0
+        break
+    else:
+        raise last
     ch = r["choices"][0]
     if ch.get("finish_reason") == "length":
         raise RuntimeError("truncated: output hit MAX_TOKENS (thinking tokens count too)")
-    return ch["message"]["content"] or "", r.get("usage", {}), dt
+    usage = r.get("usage", {}) or {}
+    meta = {"reasoning_param": extra, "served_model": r.get("model"), "served_provider": r.get("provider"),
+            "reasoning_tokens": (usage.get("completion_tokens_details") or {}).get("reasoning_tokens")}
+    return ch["message"]["content"] or "", usage, dt, meta
 
 def sim(a, b):
     norm = lambda t: "\n".join(sorted(l.strip().lower() for l in t.splitlines() if l.strip()))
@@ -75,34 +104,34 @@ def main():
     spec = importlib.util.spec_from_file_location("checks", tdir / "checks.py"); checks = importlib.util.module_from_spec(spec); spec.loader.exec_module(checks)
     base = (root / "bases" / BASE / "base.md").read_text()
     have = catalog_ids()
-    models = [m for m in MODELS if have is None or m.lower() in have]
+    models = MODELS
     for m in MODELS:
-        if m not in models: print("skipped, not in catalog:", m)
+        if have is not None and m.lower() not in have: print("not in catalog (trying anyway):", m)
     if have is not None:
         print("catalog sample:", sorted(have)[:60])
     run_id = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d-%H%M%S")
     out = root / "results" / f"{run_id}-{TASK}"; (out / "raw").mkdir(parents=True)
-    plan = list(itertools.product(models, ["bare", "base"], task["starts"].keys(), range(REPS)))
+    plan = list(itertools.product(models, CONDITIONS, task["starts"].keys(), range(REPS)))
     if len(plan) > MAX_CALLS:
         print(f"plan {len(plan)} calls > MAX_CALLS {MAX_CALLS}; truncating"); plan = plan[:MAX_CALLS]
     rows = []
     for i, (model, cond, start, rep) in enumerate(plan):
         user = task["prompt"] + "\n\n" + task["notes"] + ("\n" + task["starts"][start] if task["starts"][start] else "")
         try:
-            text, usage, dt = call(model, base if cond == "base" else "", user)
+            text, usage, dt, meta = call(model, base if cond == "base" else "", user, cond == "think")
             err = None
         except Exception as e:
-            text, usage, dt, err = "", {}, 0.0, str(e)[:300]
+            text, usage, dt, meta, err = "", {}, 0.0, {}, str(e)[:300]
         res = checks.run(text) if not err else {}
         row = {"model": model, "condition": cond, "start": start, "rep": rep, "latency_s": round(dt, 2),
-               "tokens": usage.get("total_tokens"), "error": err,
+               "tokens": usage.get("total_tokens"), "error": err, **meta,
                "checks": {k: {"kind": v[0], "pass": v[1]} for k, v in res.items()}}
         rows.append(row)
         (out / "raw" / f"{model.replace('/', '_')}-{cond}-{start}-{rep}.txt").write_text(text or f"ERROR: {err}")
         print(i + 1, model, cond, start, rep, "err" if err else f"{sum(v[1] for v in res.values())}/{len(res)}")
         time.sleep(PAUSE)
     (out / "rows.json").write_text(json.dumps(rows, indent=1))
-    (out / "debug.json").write_text(json.dumps({"catalog": sorted(have) if have else None, "http_errors": DEBUG[:10]}, indent=1))
+    (out / "debug.json").write_text(json.dumps({"catalog": sorted(x for x in have if not x.startswith("openrouter/") or x.endswith(":free")) if have else None, "http_errors": DEBUG[:10]}, indent=1))
     summarise(rows, out, run_id)
 
 def summarise(rows, out, run_id):
@@ -133,13 +162,15 @@ def summarise(rows, out, run_id):
     errs = [r for r in rows if r["error"]]
     if errs:
         lines += ["", f"Errors: {len(errs)}. First: {errs[0]['error']}"]
-    lines += ["", "## Gain of base over bare (score), and recovery (flawed vs clean)", ""]
+    lines += ["", "## Gain over bare (score, tokens, latency), and recovery (flawed vs clean)", ""]
     for m in sorted({k[0] for k in agg}):
         for s in ["clean", "flawed"]:
-            b, x = agg.get((m, "bare", s)), agg.get((m, "base", s))
-            if b and x and b["score"] is not None and x["score"] is not None:
-                lines.append(f"- {m}, {s}: bare {b['score']} → base {x['score']} (gain {round(x['score'] - b['score'], 2)})")
-        for c in ["bare", "base"]:
+            b = agg.get((m, "bare", s))
+            for c in ["think", "base"]:
+                x = agg.get((m, c, s))
+                if b and x and b["score"] is not None and x["score"] is not None:
+                    lines.append(f"- {m}, {s}: bare {b['score']} → {c} {x['score']} (gain {round(x['score'] - b['score'], 2)}; tokens {b['tokens']} → {x['tokens']}; latency {b['latency']} → {x['latency']} s)")
+        for c in ["bare", "think", "base"]:
             cl, fl = agg.get((m, c, "clean")), agg.get((m, c, "flawed"))
             if cl and fl and cl["score"] is not None and fl["score"] is not None:
                 lines.append(f"- {m}, {c}: recovery gap {round(cl['score'] - fl['score'], 2)} (0 = full recovery)")

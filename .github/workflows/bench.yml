@@ -6,6 +6,7 @@ on:
       base: {description: "base folder", default: "minimal"}
       models: {description: "comma-separated model ids", default: "gemini/gemini-3.5-flash-lite,gemini/gemini-3.5-flash"}
       reps: {description: "repetitions per cell", default: "3"}
+      conditions: {description: "bare, think (reasoning on), base (our base, reasoning off)", default: "bare,think,base"}
       max_calls: {description: "hard cap on model calls", default: "40"}
 permissions:
   contents: write
@@ -23,6 +24,8 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          CONDITIONS: ${{ inputs.conditions }}
           TASK: ${{ inputs.task }}
           BASE: ${{ inputs.base }}
           MODELS: ${{ inputs.models }}
