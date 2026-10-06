@@ -1,0 +1,23 @@
+{
+ "catalog": null,
+ "http_errors": [
+  {
+   "url": "https://models.github.ai/catalog/models",
+   "status": 200,
+   "content_type": "text/plain",
+   "body": "OK\r\n"
+  },
+  {
+   "url": "https://models.github.ai/inference/chat/completions",
+   "status": 200,
+   "content_type": "text/plain",
+   "body": "OK\r\n"
+  },
+  {
+   "url": "https://models.github.ai/inference/chat/completions",
+   "status": 200,
+   "content_type": "text/plain",
+   "body": "OK\r\n"
+  }
+ ]
+}

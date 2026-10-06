@@ -1,0 +1,22 @@
+[
+ {
+  "model": "openai/gpt-4.1-mini",
+  "condition": "bare",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "HTTP 200: b'OK\\r\\n'",
+  "checks": {}
+ },
+ {
+  "model": "openai/gpt-4.1-mini",
+  "condition": "bare",
+  "start": "flawed",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "HTTP 200: b'OK\\r\\n'",
+  "checks": {}
+ }
+]
