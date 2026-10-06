@@ -11,7 +11,6 @@ PROVIDERS = {
     "groq": {"base": "https://api.groq.com/openai/v1", "key": "GROQ_API_KEY"},
     "cohere": {"base": "https://api.cohere.ai/compatibility/v1", "key": "COHERE_API_KEY"},
     "qwen": {"base": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1", "key": "QWEN_API_KEY"},
-    "qwencn": {"base": "https://dashscope.aliyuncs.com/compatible-mode/v1", "key": "QWEN_API_KEY"},
 }
 
 # Conditions: the same model three ways. "bare" and "base" run with reasoning off; "think" with it on.
@@ -27,7 +26,7 @@ def reasoning_variants(provider, on):
         return [{"thinking": {"type": "enabled"}}] if on else [{"thinking": {"type": "disabled"}}, {}]
     if provider == "groq":
         return [{"reasoning_effort": "high"}, {"reasoning_effort": "default"}] if on else [{"reasoning_effort": "none"}, {}]
-    if provider in ("qwen", "qwencn"):
+    if provider == "qwen":
         return [{"enable_thinking": True}] if on else [{"enable_thinking": False}, {}]
     if provider == "cohere":
         return [{"reasoning_effort": "high"}] if on else [{}]
@@ -46,7 +45,8 @@ def split(model):
     return PROVIDERS[prov], name
 
 def headers(p):
-    return {"Authorization": f"Bearer {os.environ.get(p['key'], '')}", "Content-Type": "application/json"}
+    return {"Authorization": f"Bearer {os.environ.get(p['key'], '')}", "Content-Type": "application/json",
+            "User-Agent": "plyn-bench/0.1"}   # some providers' firewalls reject Python's default agent
 
 DEBUG = []
 
