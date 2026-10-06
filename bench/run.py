@@ -1,6 +1,6 @@
 """Runner: prompts each model under each condition (bare | base) and start, N repetitions,
 scores with the task's checks and writes results/<run>/. Hard limits: MAX_CALLS, MAX_TOKENS."""
-import os, sys, json, time, difflib, itertools, importlib.util, pathlib, urllib.request, datetime
+import os, sys, json, urllib.error, time, difflib, itertools, importlib.util, pathlib, urllib.request, datetime
 import yaml
 
 ENDPOINT = "https://models.github.ai/inference/chat/completions"
@@ -16,10 +16,23 @@ MODELS = [m.strip() for m in os.environ.get("MODELS", "openai/gpt-4.1-mini,meta/
 H = {"Authorization": f"Bearer {TOKEN}", "Accept": "application/vnd.github+json",
      "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"}
 
+DEBUG = []
+
 def http(url, body=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body else None, headers=H)
-    with urllib.request.urlopen(req, timeout=180) as r:
-        return json.loads(r.read())
+    try:
+        with urllib.request.urlopen(req, timeout=180) as r:
+            raw = r.read(); status = r.status; ctype = r.headers.get("Content-Type")
+    except urllib.error.HTTPError as e:
+        raw = e.read(); status = e.code; ctype = e.headers.get("Content-Type")
+    try:
+        data = json.loads(raw)
+    except Exception:
+        data = None
+    if status >= 400 or data is None:
+        DEBUG.append({"url": url, "status": status, "content_type": ctype, "body": raw[:500].decode("utf-8", "replace")})
+        raise RuntimeError(f"HTTP {status}: {raw[:200]!r}")
+    return data
 
 def catalog_ids():
     try:
@@ -72,6 +85,7 @@ def main():
         print(i + 1, model, cond, start, rep, "err" if err else f"{sum(v[1] for v in res.values())}/{len(res)}")
         time.sleep(PAUSE)
     (out / "rows.json").write_text(json.dumps(rows, indent=1))
+    (out / "debug.json").write_text(json.dumps({"catalog": sorted(have) if have else None, "http_errors": DEBUG[:10]}, indent=1))
     summarise(rows, out, run_id)
 
 def summarise(rows, out, run_id):
