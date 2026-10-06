@@ -1,0 +1,22 @@
+[
+ {
+  "model": "gemini/gemini-2.5-flash-lite",
+  "condition": "bare",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "HTTP 404: b'[{\\n  \"error\": {\\n    \"code\": 404,\\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest'",
+  "checks": {}
+ },
+ {
+  "model": "gemini/gemini-2.5-flash-lite",
+  "condition": "bare",
+  "start": "flawed",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "HTTP 404: b'[{\\n  \"error\": {\\n    \"code\": 404,\\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest'",
+  "checks": {}
+ }
+]
