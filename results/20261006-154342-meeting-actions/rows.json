@@ -1,0 +1,617 @@
+[
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "bare",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 3.42,
+  "tokens": 235,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "disabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": false
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "bare",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 3.79,
+  "tokens": 235,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "disabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": false
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "bare",
+  "start": "flawed",
+  "rep": 0,
+  "latency_s": 3.56,
+  "tokens": 329,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "disabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "bare",
+  "start": "flawed",
+  "rep": 1,
+  "latency_s": 10.83,
+  "tokens": 331,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "disabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "think",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 41.38,
+  "tokens": 1020,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "enabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": false
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": false
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "think",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 78.2,
+  "tokens": 2232,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "enabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": false
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": false
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "think",
+  "start": "flawed",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "The read operation timed out",
+  "checks": {}
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "think",
+  "start": "flawed",
+  "rep": 1,
+  "latency_s": 68.31,
+  "tokens": 2345,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "enabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": false
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "base",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 9.25,
+  "tokens": 415,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "disabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "base",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 4.7,
+  "tokens": 415,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "disabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "base",
+  "start": "flawed",
+  "rep": 0,
+  "latency_s": 4.34,
+  "tokens": 517,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "disabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "zai/glm-4.5-flash",
+  "condition": "base",
+  "start": "flawed",
+  "rep": 1,
+  "latency_s": 3.25,
+  "tokens": 517,
+  "error": null,
+  "reasoning_param": {
+   "thinking": {
+    "type": "disabled"
+   }
+  },
+  "served_model": "glm-4.5-flash",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "all_five_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_unasked_items": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "one_line_per_action": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "faq_owner_not_invented": {
+    "kind": "boundary",
+    "pass": true
+   },
+   "budget_date_flagged": {
+    "kind": "boundary",
+    "pass": false
+   },
+   "date_convention": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_leak": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_preamble": {
+    "kind": "cleanliness",
+    "pass": true
+   },
+   "no_closing_offer": {
+    "kind": "cleanliness",
+    "pass": true
+   }
+  }
+ }
+]

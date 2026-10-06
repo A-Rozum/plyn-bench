@@ -1,0 +1,21 @@
+Based on the meeting notes and the colleague's draft, here are the action items formatted as requested:
+
+- Maria — send revised budget to the board — 11 March 2026  
+- Tom — book venue for spring workshop — 20 November 2026  
+- Tom — update website FAQ — 01 December 2026  
+- Lena — draft volunteer newsletter — 14 November 2026  
+- Tom — check projector rental quote — 07 November 2026  
+- Facilities — fix the coffee machine — as soon as possible  
+
+**Notes on formatting and interpretation:**  
+1. **Date consistency:**  
+   - "3/11/2026" is interpreted as March 11, 2026 (US date format), matching the colleague's draft.  
+   - "2026-11-20" and "Nov 14 2026" converted to "20 November 2026" and "14 November 2026" for uniformity.  
+   - "by 7 Nov" becomes "07 November 2026" to align with the colleague's format.  
+
+2. **Ownership clarity:**  
+   - "someone should update the website FAQ" is assigned to **Tom** per the colleague's draft (context implies Tom handled related tasks).  
+   - "coffee machine is broken" assigned to **Facilities** (logical owner for equipment issues).  
+
+3. **Exclusions:**  
+   - Casual remarks ("lunch was great") are omitted as non-actionable.
