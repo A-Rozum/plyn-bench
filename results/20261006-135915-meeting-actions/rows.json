@@ -1,0 +1,42 @@
+[
+ {
+  "model": "zai/glm-4.7-flash",
+  "condition": "bare",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "HTTP 429: b'{\"error\":{\"code\":\"1305\",\"message\":\"The service may be temporarily overloaded, please try again later\"}}'",
+  "checks": {}
+ },
+ {
+  "model": "zai/glm-4.7-flash",
+  "condition": "bare",
+  "start": "flawed",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "HTTP 429: b'{\"error\":{\"code\":\"1305\",\"message\":\"The service may be temporarily overloaded, please try again later\"}}'",
+  "checks": {}
+ },
+ {
+  "model": "openrouter/meta-llama/llama-3.3-70b-instruct:free",
+  "condition": "bare",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "HTTP 404: b'{\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\",\"code\":404},\"user_id\":\"user_3C5tjNUt7UUWaTDh9VMki'",
+  "checks": {}
+ },
+ {
+  "model": "openrouter/meta-llama/llama-3.3-70b-instruct:free",
+  "condition": "bare",
+  "start": "flawed",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "HTTP 404: b'{\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\",\"code\":404},\"user_id\":\"user_3C5tjNUt7UUWaTDh9VMki'",
+  "checks": {}
+ }
+]
