@@ -18,11 +18,12 @@ for name, cfg in providers.items():
                      run.headers(p))
         status = "ok" if "ok" in (r["choices"][0]["message"].get("content") or "").lower() else "answered, unexpected text"
     except Exception as e:
-        status, note = "error", str(e)[:140].replace("|", "/")
-        if "404" in note or "not found" in note.lower() or "does not exist" in note.lower():
+        status, note = "error", str(e)[:90].replace("|", "/")
+        if any(x in note.lower() for x in ("404", "410", "not found", "does not exist", "end of lif")):
             try:
-                ids = [m["id"] for m in run.http(p["base"] + "/models", h=run.headers(p)).get("data", [])][:8]
-                note += " — available e.g.: " + ", ".join(ids)
+                ids = [m["id"] for m in run.http(p["base"] + "/models", h=run.headers(p)).get("data", [])]
+                pick = [i for i in ids if any(k in i for k in ("nemotron", "llama-4", "gpt-oss", "qwen3", "mistral"))][:12]
+                note += " — available e.g.: " + ", ".join(pick or ids[:12])
             except Exception:
                 pass
     exp = cfg.get("expires")
