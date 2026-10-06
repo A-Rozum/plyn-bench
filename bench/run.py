@@ -3,23 +3,30 @@ scores with the task's checks and writes results/<run>/. Hard limits: MAX_CALLS,
 import os, sys, json, urllib.error, time, difflib, itertools, importlib.util, pathlib, urllib.request, datetime
 import yaml
 
-ENDPOINT = "https://models.github.ai/inference/chat/completions"
-CATALOG = "https://models.github.ai/catalog/models"
-TOKEN = os.environ["GITHUB_TOKEN"]
+# Providers with OpenAI-compatible chat endpoints. Model ids are "<provider>/<model>".
+PROVIDERS = {
+    "gemini": {"base": "https://generativelanguage.googleapis.com/v1beta/openai", "key": "GEMINI_API_KEY"},
+    "openrouter": {"base": "https://openrouter.ai/api/v1", "key": "OPENROUTER_API_KEY"},
+}
 MAX_CALLS = int(os.environ.get("MAX_CALLS", "40"))
 MAX_TOKENS = int(os.environ.get("MAX_TOKENS", "700"))
-PAUSE = float(os.environ.get("PAUSE", "7"))
+PAUSE = float(os.environ.get("PAUSE", "13"))
 REPS = int(os.environ.get("REPS", "3"))
 TASK = os.environ.get("TASK", "meeting-actions")
 BASE = os.environ.get("BASE", "minimal")
-MODELS = [m.strip() for m in os.environ.get("MODELS", "openai/gpt-4.1-mini,meta/llama-3.3-70b-instruct").split(",") if m.strip()]
-H = {"Authorization": f"Bearer {TOKEN}", "Accept": "application/vnd.github+json",
-     "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"}
+MODELS = [m.strip() for m in os.environ.get("MODELS", "gemini/gemini-2.5-flash-lite,gemini/gemini-2.5-flash").split(",") if m.strip()]
+
+def split(model):
+    prov, _, name = model.partition("/")
+    return PROVIDERS[prov], name
+
+def headers(p):
+    return {"Authorization": f"Bearer {os.environ.get(p['key'], '')}", "Content-Type": "application/json"}
 
 DEBUG = []
 
-def http(url, body=None):
-    req = urllib.request.Request(url, data=json.dumps(body).encode() if body else None, headers=H)
+def http(url, body=None, h=None):
+    req = urllib.request.Request(url, data=json.dumps(body).encode() if body else None, headers=h or {})
     try:
         with urllib.request.urlopen(req, timeout=180) as r:
             raw = r.read(); status = r.status; ctype = r.headers.get("Content-Type")
@@ -35,15 +42,22 @@ def http(url, body=None):
     return data
 
 def catalog_ids():
-    try:
-        return {m["id"].lower() for m in http(CATALOG)}
-    except Exception as e:
-        print("catalog unavailable:", e); return None
+    ids = set()
+    for name, p in PROVIDERS.items():
+        if not os.environ.get(p["key"]):
+            continue
+        try:
+            for m in http(p["base"] + "/models", h=headers(p)).get("data", []):
+                ids.add(f"{name}/{m['id'].removeprefix('models/')}".lower())
+        except Exception as e:
+            print("catalog unavailable for", name, e)
+    return ids or None
 
 def call(model, system, user):
     msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": user}]
     t0 = time.time()
-    r = http(ENDPOINT, {"model": model, "messages": msgs, "max_tokens": MAX_TOKENS})
+    p, name = split(model)
+    r = http(p["base"] + "/chat/completions", {"model": name, "messages": msgs, "max_tokens": MAX_TOKENS}, headers(p))
     dt = time.time() - t0
     return r["choices"][0]["message"]["content"] or "", r.get("usage", {}), dt
 
@@ -63,7 +77,7 @@ def main():
         if m not in models: print("skipped, not in catalog:", m)
     if have is not None:
         print("catalog sample:", sorted(have)[:60])
-    run_id = datetime.datetime.utcnow().strftime("%Y%m%d-%H%M%S")
+    run_id = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d-%H%M%S")
     out = root / "results" / f"{run_id}-{TASK}"; (out / "raw").mkdir(parents=True)
     plan = list(itertools.product(models, ["bare", "base"], task["starts"].keys(), range(REPS)))
     if len(plan) > MAX_CALLS:
