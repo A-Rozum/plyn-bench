@@ -1,0 +1,14 @@
+== catalog
+HTTP/2 200 
+content-type: text/plain
+
+OK
+
+== inference
+HTTP/2 200 
+content-type: text/plain
+
+OK
+
+== env
+no proxy vars
