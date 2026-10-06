@@ -11,6 +11,8 @@ PROVIDERS = {
     "groq": {"base": "https://api.groq.com/openai/v1", "key": "GROQ_API_KEY"},
     "cohere": {"base": "https://api.cohere.ai/compatibility/v1", "key": "COHERE_API_KEY"},
     "qwen": {"base": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1", "key": "QWEN_API_KEY"},
+    "hf": {"base": "https://router.huggingface.co/v1", "key": "HF_API_KEY"},
+    "nvidia": {"base": "https://integrate.api.nvidia.com/v1", "key": "NVIDIA_API_KEY"},
 }
 
 # Conditions: the same model three ways. "bare" and "base" run with reasoning off; "think" with it on.

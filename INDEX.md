@@ -1,6 +1,7 @@
 - criteria/ – common criteria and the format every project's criteria follow.
 - bases/ – instruction bases under test (the condition "base"; "bare" means none).
 - tasks/ – benchmark tasks: input, starting states, automated checks.
-- bench/ – the runner and scorer.
+- providers.yaml – model providers: model used for checks, access type, limits, expiry dates.
+- bench/ – the runner, scorer and weekly health check (results/health.md).
 - results/ – one folder per run: raw outputs, scores, summary.md.
-- .github/workflows/bench.yml – starts a run (manual dispatch), with hard limits on calls.
+- .github/workflows/ – bench.yml starts a run (manual, hard call cap); health.yml checks every provider weekly.

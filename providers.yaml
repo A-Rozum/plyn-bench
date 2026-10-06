@@ -1,0 +1,10 @@
+# Model providers: one model per provider for health checks; status and limits as observed.
+# "expires" marks dates after which a free quota or key stops working.
+gemini:     {model: gemini-3.5-flash-lite, access: free tier, notes: "3.5 Flash hits its daily cap after ~20 calls; free-tier data may train models"}
+openrouter: {model: "nvidia/nemotron-3-super-120b-a12b:free", access: free models, notes: "20 req/min, 50 req/day without credits; free model list changes"}
+zai:        {model: glm-4.5-flash, access: free flash models, notes: "often overloaded (429)"}
+groq:       {model: openai/gpt-oss-120b, access: free tier, notes: "firewall needs a User-Agent; also hosts qwen/qwen3.8-27b"}
+cohere:     {model: command-a-03-2025, access: trial key, notes: "reasoning needs a separate reasoning model"}
+qwen:       {model: qwen-plus-character, access: free quota, expires: 2027-01-04, notes: "Alibaba Model Studio, Singapore; quota activated 2026-10-06 for 90 days"}
+hf:         {model: openai/gpt-oss-20b, access: free monthly credits, notes: "Hugging Face router; picks a hosting provider unless pinned"}
+nvidia:     {model: meta/llama-3.3-70b-instruct, access: free developer access, notes: "build.nvidia.com"}
