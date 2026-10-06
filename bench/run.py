@@ -25,7 +25,7 @@ def reasoning_variants(provider, on):
     if provider == "zai":
         return [{"thinking": {"type": "enabled"}}] if on else [{"thinking": {"type": "disabled"}}, {}]
     if provider == "groq":
-        return [{"reasoning_effort": "high"}, {"reasoning_effort": "default"}] if on else [{"reasoning_effort": "none"}, {}]
+        return [{"reasoning_effort": "high"}, {"reasoning_effort": "default"}] if on else [{"reasoning_effort": "none"}, {"reasoning_effort": "low"}, {}]
     if provider == "qwen":
         return [{"enable_thinking": True}] if on else [{"enable_thinking": False}, {}]
     if provider == "cohere":
