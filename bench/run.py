@@ -8,6 +8,10 @@ PROVIDERS = {
     "gemini": {"base": "https://generativelanguage.googleapis.com/v1beta/openai", "key": "GEMINI_API_KEY"},
     "openrouter": {"base": "https://openrouter.ai/api/v1", "key": "OPENROUTER_API_KEY"},
     "zai": {"base": "https://api.z.ai/api/paas/v4", "key": "ZAI_API_KEY"},
+    "groq": {"base": "https://api.groq.com/openai/v1", "key": "GROQ_API_KEY"},
+    "cohere": {"base": "https://api.cohere.ai/compatibility/v1", "key": "COHERE_API_KEY"},
+    "qwen": {"base": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1", "key": "QWEN_API_KEY"},
+    "qwencn": {"base": "https://dashscope.aliyuncs.com/compatible-mode/v1", "key": "QWEN_API_KEY"},
 }
 
 # Conditions: the same model three ways. "bare" and "base" run with reasoning off; "think" with it on.
@@ -20,12 +24,19 @@ def reasoning_variants(provider, on):
     if provider == "openrouter":
         return [{"reasoning": {"effort": "high"}}] if on else [{"reasoning": {"enabled": False}}, {"reasoning": {"effort": "low"}}]
     if provider == "zai":
-        return [{"thinking": {"type": "enabled"}}] if on else [{"thinking": {"type": "disabled"}}]
+        return [{"thinking": {"type": "enabled"}}] if on else [{"thinking": {"type": "disabled"}}, {}]
+    if provider == "groq":
+        return [{"reasoning_effort": "high"}, {"reasoning_effort": "default"}] if on else [{"reasoning_effort": "none"}, {}]
+    if provider in ("qwen", "qwencn"):
+        return [{"enable_thinking": True}] if on else [{"enable_thinking": False}, {}]
+    if provider == "cohere":
+        return [{"reasoning_effort": "high"}] if on else [{}]
     return [{}]
 MAX_CALLS = int(os.environ.get("MAX_CALLS", "40"))
-MAX_TOKENS = int(os.environ.get("MAX_TOKENS", "4000"))
+MAX_TOKENS = int(os.environ.get("MAX_TOKENS", "800"))          # reasoning off: the answer itself is short
+MAX_TOKENS_THINK = int(os.environ.get("MAX_TOKENS_THINK", "4000"))  # reasoning on: room for the reasoning
 PAUSE = float(os.environ.get("PAUSE", "13"))
-REPS = int(os.environ.get("REPS", "3"))
+REPS = int(os.environ.get("REPS", "2"))
 TASK = os.environ.get("TASK", "meeting-actions")
 BASE = os.environ.get("BASE", "minimal")
 MODELS = [m.strip() for m in os.environ.get("MODELS", "gemini/gemini-3.5-flash-lite,gemini/gemini-3.5-flash").split(",") if m.strip()]
@@ -42,7 +53,7 @@ DEBUG = []
 def http(url, body=None, h=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body else None, headers=h or {})
     try:
-        with urllib.request.urlopen(req, timeout=180) as r:
+        with urllib.request.urlopen(req, timeout=90) as r:
             raw = r.read(); status = r.status; ctype = r.headers.get("Content-Type")
     except urllib.error.HTTPError as e:
         raw = e.read(); status = e.code; ctype = e.headers.get("Content-Type")
@@ -75,7 +86,7 @@ def call(model, system, user, think):
     for extra in reasoning_variants(prov, think):
         t0 = time.time()
         try:
-            r = http(p["base"] + "/chat/completions", {"model": name, "messages": msgs, "max_tokens": MAX_TOKENS, **extra}, headers(p))
+            r = http(p["base"] + "/chat/completions", {"model": name, "messages": msgs, "max_tokens": MAX_TOKENS_THINK if think else MAX_TOKENS, **extra}, headers(p))
         except RuntimeError as e:
             last = e
             if "HTTP 400" in str(e):
@@ -110,6 +121,7 @@ def main():
     if have is not None:
         print("catalog sample:", sorted(have)[:60])
     run_id = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d-%H%M%S")
+    (root / "results" / ".current").write_text(f"{run_id}-{TASK}")
     out = root / "results" / f"{run_id}-{TASK}"; (out / "raw").mkdir(parents=True)
     plan = list(itertools.product(models, CONDITIONS, task["starts"].keys(), range(REPS)))
     if len(plan) > MAX_CALLS:
@@ -134,7 +146,8 @@ def main():
                "checks": {k: {"kind": v[0], "pass": v[1]} for k, v in res.items()}}
         rows.append(row)
         (out / "raw" / f"{model.replace('/', '_')}-{cond}-{start}-{rep}.txt").write_text(text or f"ERROR: {err}")
-        print(i + 1, model, cond, start, rep, "err" if err else f"{sum(v[1] for v in res.values())}/{len(res)}")
+        (out / "rows.json").write_text(json.dumps(rows, indent=1))   # saved after every call
+        print(i + 1, model, cond, start, rep, "err" if err else f"{sum(v[1] for v in res.values())}/{len(res)}", flush=True)
         time.sleep(PAUSE)
     (out / "rows.json").write_text(json.dumps(rows, indent=1))
     (out / "debug.json").write_text(json.dumps({"catalog": sorted(x for x in have if not x.startswith("openrouter/") or x.endswith(":free")) if have else None, "http_errors": DEBUG[:10]}, indent=1))
@@ -183,5 +196,13 @@ def summarise(rows, out, run_id):
     (out / "summary.md").write_text("\n".join(lines) + "\n")
     print("\n".join(lines))
 
+def summarise_dir(out):
+    out = pathlib.Path(out)
+    rows = json.loads((out / "rows.json").read_text())
+    summarise(rows, out, out.name)
+
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 2 and sys.argv[1] == "--summarise":
+        summarise_dir(sys.argv[2])
+    else:
+        main()

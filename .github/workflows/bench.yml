@@ -7,14 +7,15 @@ on:
       models: {description: "comma-separated model ids", default: "gemini/gemini-3.5-flash-lite,gemini/gemini-3.5-flash"}
       reps: {description: "repetitions per cell", default: "3"}
       conditions: {description: "bare, think (reasoning on), base (our base, reasoning off)", default: "bare,think,base"}
-      max_calls: {description: "hard cap on model calls", default: "40"}
+      max_calls: {description: "hard cap on model calls", default: "24"}
+      pause: {description: "seconds between calls (match the provider's per-minute limit)", default: "8"}
 permissions:
   contents: write
-concurrency: {group: bench, cancel-in-progress: false}
+concurrency: {group: "bench-${{ inputs.models }}", cancel-in-progress: false}
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,15 +26,27 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          PAUSE: ${{ inputs.pause }}
           CONDITIONS: ${{ inputs.conditions }}
           TASK: ${{ inputs.task }}
           BASE: ${{ inputs.base }}
           MODELS: ${{ inputs.models }}
           REPS: ${{ inputs.reps }}
           MAX_CALLS: ${{ inputs.max_calls }}
+        timeout-minutes: 20
         run: python bench/run.py
-      - name: commit results
+      - name: summary (also after a timeout)
+        if: always()
         run: |
+          d=results/$(cat results/.current 2>/dev/null) && [ -f "$d/rows.json" ] && python bench/run.py --summarise "$d" || echo "no rows"
+          rm -f results/.current
+      - name: commit results
+        if: always()
+        run: |
+          git pull --rebase -q || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add results
