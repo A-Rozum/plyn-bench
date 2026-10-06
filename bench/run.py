@@ -14,7 +14,7 @@ PAUSE = float(os.environ.get("PAUSE", "13"))
 REPS = int(os.environ.get("REPS", "3"))
 TASK = os.environ.get("TASK", "meeting-actions")
 BASE = os.environ.get("BASE", "minimal")
-MODELS = [m.strip() for m in os.environ.get("MODELS", "gemini/gemini-2.5-flash-lite,gemini/gemini-2.5-flash").split(",") if m.strip()]
+MODELS = [m.strip() for m in os.environ.get("MODELS", "gemini/gemini-3.5-flash-lite,gemini/gemini-3.5-flash").split(",") if m.strip()]
 
 def split(model):
     prov, _, name = model.partition("/")

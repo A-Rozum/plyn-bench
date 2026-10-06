@@ -4,7 +4,7 @@ on:
     inputs:
       task: {description: "task folder", default: "meeting-actions"}
       base: {description: "base folder", default: "minimal"}
-      models: {description: "comma-separated model ids", default: "gemini/gemini-2.5-flash-lite,gemini/gemini-2.5-flash"}
+      models: {description: "comma-separated model ids", default: "gemini/gemini-3.5-flash-lite,gemini/gemini-3.5-flash"}
       reps: {description: "repetitions per cell", default: "3"}
       max_calls: {description: "hard cap on model calls", default: "40"}
 permissions:
