@@ -1,0 +1,234 @@
+[
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.6,
+  "tokens": 344,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 1.0,
+  "tokens": 344,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.61,
+  "tokens": 344,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 1.05,
+  "tokens": 344,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.66,
+  "tokens": 333,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.67,
+  "tokens": 333,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.79,
+  "tokens": 333,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.83,
+  "tokens": 333,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ }
+]
