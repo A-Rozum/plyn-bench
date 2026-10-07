@@ -11,7 +11,7 @@ on:
       pause: {description: "seconds between calls (match the provider's per-minute limit)", default: "8"}
 permissions:
   contents: write
-concurrency: {group: "bench-${{ inputs.models }}", cancel-in-progress: false}
+concurrency: {group: "bench-${{ inputs.task }}-${{ inputs.models }}", cancel-in-progress: false}
 jobs:
   run:
     runs-on: ubuntu-latest

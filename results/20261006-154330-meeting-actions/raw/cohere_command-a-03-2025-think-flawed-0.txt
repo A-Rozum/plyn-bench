@@ -1,1 +1,0 @@
-ERROR: HTTP 400: b'{"id":"8d797f70-c9e3-4b56-a5d7-ab1b03d0acc7","message":"invalid request: `thinking` parameter is not supported with the specified model."}'

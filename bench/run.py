@@ -116,6 +116,8 @@ def main():
     task = yaml.safe_load((tdir / "task.yaml").read_text())
     spec = importlib.util.spec_from_file_location("checks", tdir / "checks.py"); checks = importlib.util.module_from_spec(spec); spec.loader.exec_module(checks)
     base = (root / "bases" / BASE / "base.md").read_text()
+    variants = task.get("variants")          # A/B tasks: conditions are variant names, system text per variant
+    conds = list(variants) if variants else CONDITIONS
     have = catalog_ids()
     models = MODELS
     for m in MODELS:
@@ -125,16 +127,17 @@ def main():
     run_id = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d-%H%M%S")
     (root / "results" / ".current").write_text(f"{run_id}-{TASK}")
     out = root / "results" / f"{run_id}-{TASK}"; (out / "raw").mkdir(parents=True)
-    plan = list(itertools.product(models, CONDITIONS, task["starts"].keys(), range(REPS)))
+    plan = list(itertools.product(models, conds, task["starts"].keys(), range(REPS)))
     if len(plan) > MAX_CALLS:
         print(f"plan {len(plan)} calls > MAX_CALLS {MAX_CALLS}; truncating"); plan = plan[:MAX_CALLS]
     rows = []
     for i, (model, cond, start, rep) in enumerate(plan):
-        user = task["prompt"] + "\n\n" + task["notes"] + ("\n" + task["starts"][start] if task["starts"][start] else "")
+        user = task["prompt"] + "\n\n" + task.get("notes", "") + ("\n" + task["starts"][start] if task["starts"][start] else "")
         err = None
         for attempt in range(2):   # one retry after a pause when the provider is overloaded or rate-limited
             try:
-                text, usage, dt, meta = call(model, base if cond == "base" else "", user, cond == "think")
+                system = variants[cond] if variants else (base if cond == "base" else "")
+                text, usage, dt, meta = call(model, system, user, cond == "think")
                 err = None
                 break
             except Exception as e:

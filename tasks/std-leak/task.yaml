@@ -1,0 +1,44 @@
+id: std-leak
+prompt: Turn these notes into a list of action items, one per line, in the form "-
+  Owner — action — due date". Nothing else.
+notes: 'Quick sync notes: Anna sends the draft to the printer by Friday. Ben books
+  the room for the launch, next Tuesday. Also Ben checks the catering offer by Thursday.
+  The weather was lovely.'
+starts:
+  clean: ''
+variants:
+  A_spec: 'SPECIFICATION (element type: spec). Applies when creating, classifying
+    or changing system elements; otherwise it does not apply.
+
+
+    Element types: core (invariants valid at every scale, always in context); norm
+    (positive two-sided property of a result, checkable); method (how to achieve a
+    result, refers to norms); convention (values that parametrise a result without
+    changing rules); concept (term with definition); component (reusable unit of result,
+    used in 2+ contexts); template (skeleton of a result with places to fill); reference
+    (canonical data, quoted exactly, never executed); example (marked example, not
+    a norm); quality model (vague requirement split into measurable parts); metric
+    (what is measured, scale, method); role; task type; handoff interface; trigger;
+    tool (tested executable code); check (check of one norm); profile (measured tendencies
+    of a model); resource (provider, budget, quota); block (tested configuration of
+    role + elements + tools); index.
+
+    Every element starts with metadata: id type:scope/name@version, applies-when,
+    version, dependencies, provenance, last check, access class, lifecycle status.'
+  B_kernel: 'ECOSYSTEM KERNEL. Applies always, to all work.
+
+
+    Element types: core (invariants valid at every scale, always in context); norm
+    (positive two-sided property of a result, checkable); method (how to achieve a
+    result, refers to norms); convention (values that parametrise a result without
+    changing rules); concept (term with definition); component (reusable unit of result,
+    used in 2+ contexts); template (skeleton of a result with places to fill); reference
+    (canonical data, quoted exactly, never executed); example (marked example, not
+    a norm); quality model (vague requirement split into measurable parts); metric
+    (what is measured, scale, method); role; task type; handoff interface; trigger;
+    tool (tested executable code); check (check of one norm); profile (measured tendencies
+    of a model); resource (provider, budget, quota); block (tested configuration of
+    role + elements + tools); index.
+
+    Every element starts with metadata: id type:scope/name@version, applies-when,
+    version, dependencies, provenance, last check, access class, lifecycle status.'

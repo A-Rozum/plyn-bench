@@ -1,0 +1,52 @@
+id: std-classify
+prompt: 'Classify each item by element type. Answer one line per item, exactly in
+  the form "N: type", nothing else.'
+notes: '1. Every quotation reproduces the source text exactly, word for word.
+
+  2. To verify a quotation, open the source and compare it word by word.
+
+  3. Dates are written as DD Month YYYY.
+
+  4. INTERPOL Rules on the Processing of Data, Article 83 (full text).
+
+  5. Skeleton of a deletion request with marked places to fill in.
+
+  6. A script that compares quotations with their sources, with tests.'
+starts:
+  clean: ''
+variants:
+  A_spec: 'SPECIFICATION (element type: spec). Applies when creating, classifying
+    or changing system elements; otherwise it does not apply.
+
+
+    Element types: core (invariants valid at every scale, always in context); norm
+    (positive two-sided property of a result, checkable); method (how to achieve a
+    result, refers to norms); convention (values that parametrise a result without
+    changing rules); concept (term with definition); component (reusable unit of result,
+    used in 2+ contexts); template (skeleton of a result with places to fill); reference
+    (canonical data, quoted exactly, never executed); example (marked example, not
+    a norm); quality model (vague requirement split into measurable parts); metric
+    (what is measured, scale, method); role; task type; handoff interface; trigger;
+    tool (tested executable code); check (check of one norm); profile (measured tendencies
+    of a model); resource (provider, budget, quota); block (tested configuration of
+    role + elements + tools); index.
+
+    Every element starts with metadata: id type:scope/name@version, applies-when,
+    version, dependencies, provenance, last check, access class, lifecycle status.'
+  B_kernel: 'ECOSYSTEM KERNEL. Applies always, to all work.
+
+
+    Element types: core (invariants valid at every scale, always in context); norm
+    (positive two-sided property of a result, checkable); method (how to achieve a
+    result, refers to norms); convention (values that parametrise a result without
+    changing rules); concept (term with definition); component (reusable unit of result,
+    used in 2+ contexts); template (skeleton of a result with places to fill); reference
+    (canonical data, quoted exactly, never executed); example (marked example, not
+    a norm); quality model (vague requirement split into measurable parts); metric
+    (what is measured, scale, method); role; task type; handoff interface; trigger;
+    tool (tested executable code); check (check of one norm); profile (measured tendencies
+    of a model); resource (provider, budget, quota); block (tested configuration of
+    role + elements + tools); index.
+
+    Every element starts with metadata: id type:scope/name@version, applies-when,
+    version, dependencies, provenance, last check, access class, lifecycle status.'

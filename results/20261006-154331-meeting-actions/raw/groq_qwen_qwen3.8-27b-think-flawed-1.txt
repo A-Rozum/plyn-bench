@@ -1,1 +1,0 @@
-ERROR: truncated: output hit MAX_TOKENS (thinking tokens count too)
