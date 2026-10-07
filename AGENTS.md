@@ -1,8 +1,10 @@
-# Kernel
+# Kernel (plyn-bench)
 
-Navigation: start with this file and INDEX.md; open only what the current task needs.
+Navigation: system.yaml describes this repository; elements.yaml lists every element with a computable applies-predicate.
+Select what a task needs: `python .system/tools/select.py . domain=measurement task_kind=<kind>`.
 
 Invariants:
-- Secrets never go into files. Provider keys live in repository Secrets.
-- This repository is public: only abstract tasks and material cleared for publication.
-- Current material only. Results are kept; finished plans and one-off tools are deleted.
+- Secrets never go into files; provider keys live in repository Secrets.
+- This repository is public: only abstract tasks and public elements.
+- Results are kept (they are measurements); finished plans and one-off tools are deleted.
+- Every change keeps `python .system/tools/validate.py . --formats .system/formats` passing.

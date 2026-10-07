@@ -1,0 +1,185 @@
+- id: core:measurement/kernel@0.1
+  path: AGENTS.md
+  applies:
+    always: true
+  status: active
+  access: public
+  audience: agent
+- id: metric:measurement/common-criteria@0.1
+  path: criteria/common.yaml
+  applies:
+    all:
+    - &id001
+      domain: measurement
+    - task_kind:
+      - measurement
+      - design
+      - review
+  status: trial
+  access: public
+  audience: agent
+- id: package:measurement/minimal-base@0.1
+  path: bases/minimal/base.md
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - design
+  status: trial
+  access: public
+  audience: agent
+- id: tool:measurement/run@0.1
+  path: bench/run.py
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - implementation
+      - maintenance
+      - measurement
+  status: trial
+  access: public
+  audience: agent
+- id: tool:measurement/health@0.1
+  path: bench/health.py
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - implementation
+      - maintenance
+  status: trial
+  access: public
+  audience: agent
+- id: resource:measurement/providers@0.1
+  path: providers.yaml
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - maintenance
+  status: trial
+  access: public
+  audience: agent
+- id: trigger:measurement/bench-dispatch@0.1
+  path: .github/workflows/bench.yml
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - maintenance
+  status: trial
+  access: public
+  audience: agent
+- id: trigger:measurement/weekly-health@0.1
+  path: .github/workflows/health.yml
+  applies:
+    all:
+    - *id001
+    - task_kind: maintenance
+  status: trial
+  access: public
+  audience: agent
+- id: benchmark-task:measurement/core-sep@0.1
+  path: tasks/core-sep/task.yaml
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - design
+  status: trial
+  access: public
+  audience: agent
+  relations:
+  - rel: checked_by
+    to: check:measurement/core-sep-checks
+- id: check:measurement/core-sep-checks@0.1
+  path: tasks/core-sep/checks.py
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - implementation
+  status: trial
+  access: public
+  audience: agent
+- id: benchmark-task:measurement/meeting-actions@0.1
+  path: tasks/meeting-actions/task.yaml
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - design
+  status: trial
+  access: public
+  audience: agent
+  relations:
+  - rel: checked_by
+    to: check:measurement/meeting-actions-checks
+- id: check:measurement/meeting-actions-checks@0.1
+  path: tasks/meeting-actions/checks.py
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - implementation
+  status: trial
+  access: public
+  audience: agent
+- id: benchmark-task:measurement/std-classify@0.1
+  path: tasks/std-classify/task.yaml
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - design
+  status: trial
+  access: public
+  audience: agent
+  relations:
+  - rel: checked_by
+    to: check:measurement/std-classify-checks
+- id: check:measurement/std-classify-checks@0.1
+  path: tasks/std-classify/checks.py
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - implementation
+  status: trial
+  access: public
+  audience: agent
+- id: benchmark-task:measurement/std-leak@0.1
+  path: tasks/std-leak/task.yaml
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - design
+  status: trial
+  access: public
+  audience: agent
+  relations:
+  - rel: checked_by
+    to: check:measurement/std-leak-checks
+- id: check:measurement/std-leak-checks@0.1
+  path: tasks/std-leak/checks.py
+  applies:
+    all:
+    - *id001
+    - task_kind:
+      - measurement
+      - implementation
+  status: trial
+  access: public
+  audience: agent
