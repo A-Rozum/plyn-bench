@@ -195,3 +195,73 @@
   status: trial
   access: public
   audience: agent
+- id: benchmark-task:measurement/matter-leak@0.1
+  path: tasks/matter-leak/task.yaml
+  status: trial
+  access: public
+  audience: agent
+  applies:
+    all:
+    - domain: measurement
+    - task_kind:
+      - measurement
+      - implementation
+      - design
+    - subject: matter-leak
+  relations:
+  - rel: checked_by
+    to: check:measurement/matter-leak-checks
+- id: check:measurement/matter-leak-checks@0.1
+  path: tasks/matter-leak/checks.py
+  status: trial
+  access: public
+  audience: agent
+  applies:
+    all:
+    - domain: measurement
+    - task_kind:
+      - measurement
+      - implementation
+      - design
+    - subject: matter-leak
+- id: benchmark-task:measurement/missing-input@0.1
+  path: tasks/missing-input/task.yaml
+  status: trial
+  access: public
+  audience: agent
+  applies:
+    all:
+    - domain: measurement
+    - task_kind:
+      - measurement
+      - implementation
+      - design
+    - subject: missing-input
+  relations:
+  - rel: checked_by
+    to: check:measurement/missing-input-checks
+- id: check:measurement/missing-input-checks@0.1
+  path: tasks/missing-input/checks.py
+  status: trial
+  access: public
+  audience: agent
+  applies:
+    all:
+    - domain: measurement
+    - task_kind:
+      - measurement
+      - implementation
+      - design
+    - subject: missing-input
+- id: check:measurement/context@0.1
+  path: bench/check_context.py
+  status: trial
+  access: public
+  audience: agent
+  applies:
+    all:
+    - domain: measurement
+    - task_kind:
+      - measurement
+      - implementation
+      - maintenance

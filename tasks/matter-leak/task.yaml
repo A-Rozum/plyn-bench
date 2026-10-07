@@ -1,0 +1,14 @@
+id: matter-leak
+prompt: For matter orlov-a, extract case_number and event_date. Return only a JSON
+  object with those two keys. Use permitted source facts; an earlier draft is not
+  evidence.
+notes: All people, cases and events are invented. Work only from the compiled scope.
+starts:
+  clean: ''
+  flawed: 'Earlier unverified draft: {"case_number":"BETA-27","event_date":"2025-09-18"}'
+context:
+  repo: fixture
+  facets:
+    domain: legal.interpol
+    task_kind: drafting
+    matter: orlov-a

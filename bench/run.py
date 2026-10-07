@@ -1,7 +1,7 @@
 """Runner: prompts each model under each condition (bare | base) and start, N repetitions,
 scores with the task's checks and writes results/<run>/. Hard limits: MAX_CALLS, MAX_TOKENS."""
 import os, sys, json, urllib.error, time, difflib, itertools, importlib.util, pathlib, urllib.request, datetime
-import yaml
+import yaml, subprocess
 
 # Providers with OpenAI-compatible chat endpoints. Model ids are "<provider>/<model>".
 PROVIDERS = {
@@ -114,6 +114,14 @@ def main():
     root = pathlib.Path(__file__).resolve().parent.parent
     tdir = root / "tasks" / TASK
     task = yaml.safe_load((tdir / "task.yaml").read_text())
+    context = ''
+    if task.get('context'):
+        cfg = task['context']
+        fixture = (tdir / cfg['repo']).resolve()
+        if not fixture.is_relative_to(tdir.resolve()): raise ValueError('context fixture must be inside task directory')
+        subprocess.run([sys.executable, str(root / '.system/tools/compile.py'), str(fixture),
+                        *[f'{k}={v}' for k,v in cfg['facets'].items()]], check=True)
+        context = (fixture / '.context/task.md').read_text()
     spec = importlib.util.spec_from_file_location("checks", tdir / "checks.py"); checks = importlib.util.module_from_spec(spec); spec.loader.exec_module(checks)
     base = (root / "bases" / BASE / "base.md").read_text()
     variants = task.get("variants")          # A/B tasks: conditions are variant names, system text per variant
@@ -133,6 +141,7 @@ def main():
     rows = []
     for i, (model, cond, start, rep) in enumerate(plan):
         user = task["prompt"] + "\n\n" + task.get("notes", "") + ("\n" + task["starts"][start] if task["starts"][start] else "")
+        if context: user += '\n\nCOMPILED TASK CONTEXT:\n' + context
         err = None
         for attempt in range(2):   # one retry after a pause when the provider is overloaded or rate-limited
             try:

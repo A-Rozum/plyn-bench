@@ -33,6 +33,15 @@ def main():
         errors.append("system.yaml: missing")
     elements = check("elements.yaml", "elements.schema.json") or []
     check("state.yaml", "state.schema.json")
+    from inputs import inventory
+    try:
+        matters, materials = inventory(repo, elements, fdir, require_files=True)
+        st = _plain(yaml.safe_load((repo / 'state.yaml').read_text())) if (repo / 'state.yaml').exists() else {}
+        for t in st.get('tasks', []):
+            if t.get('matter') is not None and t['matter'] not in {m['id'] for m in matters}:
+                errors.append(f"state.yaml: {t['id']}: unknown matter")
+    except (ValueError, TypeError, KeyError) as ex:
+        errors.append(str(ex))
     lab = check("lab.yaml", "lab.schema.json") or []
     import datetime
     today = datetime.date.today().isoformat()

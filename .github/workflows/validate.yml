@@ -10,3 +10,4 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install pyyaml jsonschema
       - run: python .system/tools/validate.py . --formats .system/formats
+      - run: python bench/check_context.py

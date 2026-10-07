@@ -1,0 +1,11 @@
+- id: method:legal.interpol/prepare
+  path: method.md
+  status: trial
+  access: public
+  audience: agent
+  applies:
+    all:
+    - domain: legal.interpol
+    - task_kind: drafting
+  requires_inputs:
+  - decision
