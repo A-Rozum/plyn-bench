@@ -1,0 +1,6 @@
+1: norm
+2: method
+3: convention
+4: reference
+5: template
+6: tool

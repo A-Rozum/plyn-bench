@@ -1,0 +1,330 @@
+[
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.62,
+  "tokens": 655,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 196,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.6,
+  "tokens": 537,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 78,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.44,
+  "tokens": 523,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 64,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.74,
+  "tokens": 637,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 178,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.82,
+  "tokens": 676,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 229,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.31,
+  "tokens": 500,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 53,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.37,
+  "tokens": 501,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 54,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.36,
+  "tokens": 499,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 52,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ }
+]
