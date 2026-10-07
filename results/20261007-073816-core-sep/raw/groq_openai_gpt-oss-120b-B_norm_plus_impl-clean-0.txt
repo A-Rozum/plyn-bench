@@ -1,0 +1,6 @@
+```css
+/* page.css */
+.hero h1 {
+    font-size: 5rem;
+}
+```
