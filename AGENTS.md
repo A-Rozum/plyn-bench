@@ -1,7 +1,7 @@
 # Kernel (plyn-bench)
 
 Navigation: system.yaml describes this repository; elements.yaml lists every element with a computable applies-predicate.
-Select what a task needs: `python .system/tools/select.py . domain=measurement task_kind=<kind>`.
+At the start of a task compile its context and read it instead of browsing: `python .system/tools/compile.py . domain=measurement task_kind=<kind>` → .context/task.md
 
 Invariants:
 - Secrets never go into files; provider keys live in repository Secrets.
