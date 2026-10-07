@@ -21,8 +21,12 @@ def main():
         m, spec = evaluate(e["applies"], task)
         if m:
             p = repo / e["path"]
-            tokens = e.get("tokens") or (len(p.read_text(errors="ignore")) // 4 if p.is_file() else 0)
-            picked.append((spec, e["id"], e["path"], tokens, "always" in e["applies"]))
+            load = e.get("load") or ("reference" if e["id"].split(":")[0] in ("tool", "check", "trigger") else "content")
+            text = p.read_text(errors="ignore") if p.is_file() else ""
+            if load == "head":
+                text = text[: text.find("*/") + 2] if "*/" in text[:4000] else "\n".join(text.splitlines()[:40])
+            tokens = 20 if load == "reference" else (e.get("tokens") or len(text) // 4)
+            picked.append((spec, e["id"], e["path"] + ("" if load == "content" else f" [{load}]"), tokens, "always" in e["applies"]))
     picked.sort(key=lambda x: (-x[0], x[1]))
     total, out = 0, []
     for spec, i, path, tok, always in picked:

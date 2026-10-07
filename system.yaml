@@ -4,4 +4,4 @@ access: public
 audience: agent
 description: Measurements — does a shared instruction base improve models over bare models; A/B of design variants. Abstract tasks only.
 packages:
-  - {id: "repo:system", version: "v0.2.1 (a5b558f)", repo: A-Rozum/system, path: .system}
+  - {id: "repo:system", version: "v0.3.0 (84971a6)", repo: A-Rozum/system, path: .system}

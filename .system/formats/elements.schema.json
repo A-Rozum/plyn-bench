@@ -97,6 +97,14 @@
    },
    "applies": {
     "$ref": "#/$defs/pred"
+   },
+   "load": {
+    "enum": [
+     "content",
+     "head",
+     "reference"
+    ],
+    "description": "content: load the file; head: only its leading inventory/comment block; reference: name and how to use, not the source (default for tool, check, trigger)"
    }
   }
  },
