@@ -1,0 +1,266 @@
+[
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_one_element",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.46,
+  "tokens": 241,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "no_clamp": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_viewport_units": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_media": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "uses_rem": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_one_element",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.53,
+  "tokens": 239,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "no_clamp": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_viewport_units": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_media": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "uses_rem": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_one_element",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.41,
+  "tokens": 239,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "no_clamp": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_viewport_units": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_media": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "uses_rem": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_one_element",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.55,
+  "tokens": 239,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "no_clamp": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_viewport_units": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_media": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "uses_rem": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_norm_plus_impl",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.59,
+  "tokens": 247,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "no_clamp": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_viewport_units": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_media": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "uses_rem": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_norm_plus_impl",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.52,
+  "tokens": 238,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "no_clamp": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_viewport_units": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_media": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "uses_rem": {
+    "kind": "fidelity",
+    "pass": false
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_norm_plus_impl",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.49,
+  "tokens": 259,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "no_clamp": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_viewport_units": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_media": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "uses_rem": {
+    "kind": "fidelity",
+    "pass": false
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_norm_plus_impl",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.46,
+  "tokens": 249,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "no_clamp": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_viewport_units": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "no_media": {
+    "kind": "selectivity",
+    "pass": true
+   },
+   "uses_rem": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ }
+]
