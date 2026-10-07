@@ -2,6 +2,10 @@ id: repo:plyn-bench
 kind: bench
 access: public
 audience: agent
-description: Measurements — does a shared instruction base improve models over bare models; A/B of design variants. Abstract tasks only.
+description: Measurements — does a shared instruction base improve models over bare
+  models; A/B of design variants. Abstract tasks only.
 packages:
-  - {id: "repo:system", version: "v0.4.4 (12a3799)", repo: A-Rozum/system, path: .system}
+- id: repo:system
+  version: v0.5.0 (bde0b1b)
+  repo: A-Rozum/system
+  path: .system
