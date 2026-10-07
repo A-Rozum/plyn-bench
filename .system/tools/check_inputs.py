@@ -1,5 +1,11 @@
 """Check matter boundaries and input preconditions using invented cases. Run: python tools/check_inputs.py."""
-import importlib.util, json, pathlib, subprocess, sys, tempfile, unittest, yaml
+import pathlib, sys
+# Load subprocess's stdlib select before putting the adjacent context selector on the import path.
+_path = sys.path[:]
+sys.path[:] = [p for p in sys.path if pathlib.Path(p or '.').resolve() != pathlib.Path(__file__).resolve().parent]
+import subprocess
+sys.path[:] = _path
+import importlib.util, json, tempfile, unittest, yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 spec = importlib.util.spec_from_file_location('ctx_select', ROOT / 'tools/select.py')
