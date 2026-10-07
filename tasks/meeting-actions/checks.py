@@ -24,7 +24,11 @@ def run(text):
     c["one_line_per_action"] = ("fidelity", len(items) == 5)
     # boundary
     c["faq_owner_not_invented"] = ("boundary", bool(faq) and not re.search(r"\b(tom|maria|lena)\b", faq, re.I) and bool(flag.search(faq)))
-    c["budget_date_flagged"] = ("boundary", bool(budget) and bool(flag.search(budget)))
+    # 3/11/2026: context (all other deadlines Nov-Dec 2026; March would be past) makes 3 November the reading.
+    # Correct: 3 November, with or without a note; or an explicit flag without committing to March.
+    # Wrong: March without a flag (also the error planted in the flawed draft).
+    nov = re.search(r"\b0?3 November 2026", budget or "")
+    c["budget_date_resolved"] = ("boundary", bool(budget) and (bool(nov) or (bool(flag.search(budget)) and "march" not in budget.lower())))
     # selectivity: the applicable date rule applied, inapplicable rules not leaking
     dated = [_line(items, w) for w in ["venue", "newsletter", "projector"]]
     c["date_convention"] = ("selectivity", all(re.search(r"\b\d{2} " + MONTH + r" \d{4}\b", l) for l in dated if l) and all(dated))
