@@ -1,0 +1,330 @@
+[
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.65,
+  "tokens": 387,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.62,
+  "tokens": 387,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.65,
+  "tokens": 387,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.58,
+  "tokens": 387,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.44,
+  "tokens": 376,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.58,
+  "tokens": 376,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.66,
+  "tokens": 376,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.62,
+  "tokens": 376,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ }
+]
