@@ -1,0 +1,330 @@
+[
+ {
+  "model": "groq/qwen/qwen3.8-27b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.15,
+  "tokens": 404,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "none"
+  },
+  "served_model": "qwen/qwen3.8-27b",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/qwen/qwen3.8-27b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.14,
+  "tokens": 404,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "none"
+  },
+  "served_model": "qwen/qwen3.8-27b",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/qwen/qwen3.8-27b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.27,
+  "tokens": 404,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "none"
+  },
+  "served_model": "qwen/qwen3.8-27b",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": false
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/qwen/qwen3.8-27b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.21,
+  "tokens": 404,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "none"
+  },
+  "served_model": "qwen/qwen3.8-27b",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/qwen/qwen3.8-27b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.17,
+  "tokens": 391,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "none"
+  },
+  "served_model": "qwen/qwen3.8-27b",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/qwen/qwen3.8-27b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.14,
+  "tokens": 391,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "none"
+  },
+  "served_model": "qwen/qwen3.8-27b",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/qwen/qwen3.8-27b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.15,
+  "tokens": 391,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "none"
+  },
+  "served_model": "qwen/qwen3.8-27b",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/qwen/qwen3.8-27b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.16,
+  "tokens": 391,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "none"
+  },
+  "served_model": "qwen/qwen3.8-27b",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "item1": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item2": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item3": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item4": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item5": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "item6": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ }
+]
