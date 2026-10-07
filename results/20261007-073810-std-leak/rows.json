@@ -1,0 +1,234 @@
+[
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.62,
+  "tokens": 428,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 10,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.67,
+  "tokens": 489,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 66,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 1.4,
+  "tokens": 434,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 11,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "A_spec",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.63,
+  "tokens": 430,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 12,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.32,
+  "tokens": 437,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 26,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.46,
+  "tokens": 434,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 23,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 2,
+  "latency_s": 0.27,
+  "tokens": 422,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 11,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "B_kernel",
+  "start": "clean",
+  "rep": 3,
+  "latency_s": 0.55,
+  "tokens": 466,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "low"
+  },
+  "served_model": "openai/gpt-oss-120b",
+  "served_provider": null,
+  "reasoning_tokens": 55,
+  "checks": {
+   "three_actions": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_weather": {
+    "kind": "fidelity",
+    "pass": true
+   },
+   "no_element_leak": {
+    "kind": "selectivity",
+    "pass": true
+   }
+  }
+ }
+]
