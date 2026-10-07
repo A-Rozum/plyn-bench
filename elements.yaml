@@ -87,10 +87,11 @@
   path: tasks/core-sep/task.yaml
   applies:
     all:
-    - *id001
+    - domain: measurement
     - task_kind:
       - measurement
       - design
+    - subject: core-sep
   status: trial
   access: public
   audience: agent
@@ -101,10 +102,11 @@
   path: tasks/core-sep/checks.py
   applies:
     all:
-    - *id001
+    - domain: measurement
     - task_kind:
       - measurement
       - implementation
+    - subject: core-sep
   status: trial
   access: public
   audience: agent
@@ -112,10 +114,11 @@
   path: tasks/meeting-actions/task.yaml
   applies:
     all:
-    - *id001
+    - domain: measurement
     - task_kind:
       - measurement
       - design
+    - subject: meeting-actions
   status: trial
   access: public
   audience: agent
@@ -126,10 +129,11 @@
   path: tasks/meeting-actions/checks.py
   applies:
     all:
-    - *id001
+    - domain: measurement
     - task_kind:
       - measurement
       - implementation
+    - subject: meeting-actions
   status: trial
   access: public
   audience: agent
@@ -137,10 +141,11 @@
   path: tasks/std-classify/task.yaml
   applies:
     all:
-    - *id001
+    - domain: measurement
     - task_kind:
       - measurement
       - design
+    - subject: std-classify
   status: trial
   access: public
   audience: agent
@@ -151,10 +156,11 @@
   path: tasks/std-classify/checks.py
   applies:
     all:
-    - *id001
+    - domain: measurement
     - task_kind:
       - measurement
       - implementation
+    - subject: std-classify
   status: trial
   access: public
   audience: agent
@@ -162,10 +168,11 @@
   path: tasks/std-leak/task.yaml
   applies:
     all:
-    - *id001
+    - domain: measurement
     - task_kind:
       - measurement
       - design
+    - subject: std-leak
   status: trial
   access: public
   audience: agent
@@ -176,10 +183,11 @@
   path: tasks/std-leak/checks.py
   applies:
     all:
-    - *id001
+    - domain: measurement
     - task_kind:
       - measurement
       - implementation
+    - subject: std-leak
   status: trial
   access: public
   audience: agent
