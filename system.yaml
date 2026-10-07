@@ -6,7 +6,7 @@ description: Measurements — does a shared instruction base improve models over
   models; A/B of design variants. Abstract tasks only.
 packages:
 - id: repo:system
-  version: trial (b1995a0cb7c9a090276a9707683372ab526ec962)
+  version: v0.6.0 (e03cea5)
   repo: A-Rozum/system
   path: .system
 artifacts:

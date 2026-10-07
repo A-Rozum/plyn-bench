@@ -1,14 +1,10 @@
-"""Check matter boundaries and input preconditions using invented cases. Run: python tools/check_inputs.py."""
+"""Check matter boundaries and input preconditions using invented cases. Run: python tools/pn_check_inputs.py."""
 import pathlib, sys
-# Load subprocess's stdlib select before putting the adjacent context selector on the import path.
-_path = sys.path[:]
-sys.path[:] = [p for p in sys.path if pathlib.Path(p or '.').resolve() != pathlib.Path(__file__).resolve().parent]
 import subprocess
-sys.path[:] = _path
 import importlib.util, json, tempfile, unittest, yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-spec = importlib.util.spec_from_file_location('ctx_select', ROOT / 'tools/select.py')
+spec = importlib.util.spec_from_file_location('ctx_select', ROOT / 'tools/pn_select.py')
 sel = importlib.util.module_from_spec(spec); spec.loader.exec_module(sel)
 
 class Inputs(unittest.TestCase):
@@ -39,12 +35,12 @@ class Inputs(unittest.TestCase):
         self.write('elements.yaml', self.elements); self.write('materials.yaml', self.materials)
 
     def compile(self, *facets, success=True):
-        p = subprocess.run([sys.executable,str(ROOT/'tools/compile.py'),str(self.repo),*facets],capture_output=True,text=True)
+        p = subprocess.run([sys.executable,str(ROOT/'tools/pn_compile.py'),str(self.repo),*facets],capture_output=True,text=True)
         self.assertEqual(p.returncode == 0, success, p.stdout+p.stderr)
         return (self.repo/'.context/task.md').read_text() if success else p.stderr
 
     def validate(self, success=True):
-        p = subprocess.run([sys.executable,str(ROOT/'tools/validate.py'),str(self.repo)],capture_output=True,text=True)
+        p = subprocess.run([sys.executable,str(ROOT/'tools/pn_validate.py'),str(self.repo)],capture_output=True,text=True)
         self.assertEqual(p.returncode == 0, success, p.stdout+p.stderr)
 
     def test_isolation_all_sections_before_read(self):
