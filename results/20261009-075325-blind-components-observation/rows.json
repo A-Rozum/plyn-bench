@@ -1,0 +1,44 @@
+[
+ {
+  "model": "qwen/qwen-plus-character",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 14.38,
+  "tokens": 1486,
+  "error": null,
+  "reasoning_param": {
+   "enable_thinking": false
+  },
+  "served_model": "qwen-plus-character",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "answered": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "qwen/qwen-plus-character",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 12.23,
+  "tokens": 1249,
+  "error": null,
+  "reasoning_param": {
+   "enable_thinking": false
+  },
+  "served_model": "qwen-plus-character",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "answered": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ }
+]
