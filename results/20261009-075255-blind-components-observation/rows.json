@@ -1,0 +1,44 @@
+[
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 6.06,
+  "tokens": 1614,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "answered": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "gemini/gemini-3.5-flash-lite",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 5.36,
+  "tokens": 1325,
+  "error": null,
+  "reasoning_param": {
+   "reasoning_effort": "minimal"
+  },
+  "served_model": "gemini-3.5-flash-lite",
+  "served_provider": null,
+  "reasoning_tokens": null,
+  "checks": {
+   "answered": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ }
+]
