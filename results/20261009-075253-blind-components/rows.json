@@ -1,0 +1,22 @@
+[
+ {
+  "model": "hf/openai/gpt-oss-20b",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "HTTP 402: b'{\"error\":\"You have no remaining credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get monthly included credits.\"}'",
+  "checks": {}
+ },
+ {
+  "model": "hf/openai/gpt-oss-20b",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "HTTP 402: b'{\"error\":\"You have no remaining credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get monthly included credits.\"}'",
+  "checks": {}
+ }
+]
