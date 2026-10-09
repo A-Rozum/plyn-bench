@@ -1,0 +1,22 @@
+[
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "truncated: output hit MAX_TOKENS (thinking tokens count too)",
+  "checks": {}
+ },
+ {
+  "model": "groq/openai/gpt-oss-120b",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "truncated: output hit MAX_TOKENS (thinking tokens count too)",
+  "checks": {}
+ }
+]
