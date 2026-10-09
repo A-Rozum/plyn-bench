@@ -1,0 +1,22 @@
+[
+ {
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "truncated: output hit MAX_TOKENS (thinking tokens count too)",
+  "checks": {}
+ },
+ {
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 0.0,
+  "tokens": null,
+  "error": "truncated: output hit MAX_TOKENS (thinking tokens count too)",
+  "checks": {}
+ }
+]
