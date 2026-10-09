@@ -1,0 +1,40 @@
+[
+ {
+  "model": "cohere/command-a-03-2025",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 0,
+  "latency_s": 11.71,
+  "tokens": 728,
+  "error": null,
+  "reasoning_param": {},
+  "served_model": "command-a-03-2025",
+  "served_provider": null,
+  "reasoning_tokens": 0,
+  "checks": {
+   "answered": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ },
+ {
+  "model": "cohere/command-a-03-2025",
+  "condition": "blind",
+  "start": "clean",
+  "rep": 1,
+  "latency_s": 20.41,
+  "tokens": 751,
+  "error": null,
+  "reasoning_param": {},
+  "served_model": "command-a-03-2025",
+  "served_provider": null,
+  "reasoning_tokens": 0,
+  "checks": {
+   "answered": {
+    "kind": "fidelity",
+    "pass": true
+   }
+  }
+ }
+]
