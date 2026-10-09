@@ -1,0 +1,14 @@
+id: blind-components-observation
+summary: Open conceptual question asked to models without any context; answers are
+  read, not scored. Measures convergence of independent substrates.
+prompt: 'A system is developing in which people and AI agents jointly do professional
+  work, and the system improves over time. What is the minimal set of fundamentally
+  different components such a system needs in order to keep improving? For each component,
+  describe what happens to the system if it is removed. Are there components that
+  work only all together, but not in pairs? Separately: what is the nature of observation
+  in such a system — is it a component of its own, or something else?'
+notes: ''
+starts:
+  clean: ''
+variants:
+  blind: ''

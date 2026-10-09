@@ -8,6 +8,7 @@ on:
       reps: {description: "repetitions per cell", default: "3"}
       conditions: {description: "bare, think (reasoning on), base (our base, reasoning off)", default: "bare,think,base"}
       max_calls: {description: "hard cap on model calls", default: "24"}
+      max_tokens: {description: "answer token cap (reasoning off)", default: "800"}
       pause: {description: "seconds between calls (match the provider's per-minute limit)", default: "8"}
 permissions:
   contents: write
@@ -32,6 +33,7 @@ jobs:
           HF_API_KEY: ${{ secrets.HF_API_KEY }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           PAUSE: ${{ inputs.pause }}
+          MAX_TOKENS: ${{ inputs.max_tokens }}
           CONDITIONS: ${{ inputs.conditions }}
           TASK: ${{ inputs.task }}
           BASE: ${{ inputs.base }}

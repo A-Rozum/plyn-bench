@@ -265,3 +265,57 @@
       - measurement
       - implementation
       - maintenance
+- id: benchmark-task:measurement/blind-components@0.1
+  path: tasks/blind-components/task.yaml
+  applies:
+    all:
+    - domain: measurement
+    - task_kind:
+      - measurement
+      - design
+    - subject: blind-components
+  status: trial
+  access: public
+  audience: agent
+  relations:
+  - rel: checked_by
+    to: check:measurement/blind-components-checks
+- id: check:measurement/blind-components-checks@0.1
+  path: tasks/blind-components/checks.py
+  applies:
+    all:
+    - domain: measurement
+    - task_kind:
+      - measurement
+      - implementation
+    - subject: blind-components
+  status: trial
+  access: public
+  audience: agent
+- id: benchmark-task:measurement/blind-components-observation@0.1
+  path: tasks/blind-components-observation/task.yaml
+  applies:
+    all:
+    - domain: measurement
+    - task_kind:
+      - measurement
+      - design
+    - subject: blind-components-observation
+  status: trial
+  access: public
+  audience: agent
+  relations:
+  - rel: checked_by
+    to: check:measurement/blind-components-observation-checks
+- id: check:measurement/blind-components-observation-checks@0.1
+  path: tasks/blind-components-observation/checks.py
+  applies:
+    all:
+    - domain: measurement
+    - task_kind:
+      - measurement
+      - implementation
+    - subject: blind-components-observation
+  status: trial
+  access: public
+  audience: agent
