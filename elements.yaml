@@ -1,4 +1,4 @@
-- id: core:measurement/kernel@0.1
+- id: jadro:measurement/repo@0.1
   path: AGENTS.md
   applies:
     always: true
