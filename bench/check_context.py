@@ -15,7 +15,7 @@ def main():
         assert 'BETA-27' not in text and '2025-09-18' not in text and 'beta.md' not in text and 'beta-request.md' not in text, name
         assert 'ALPHA-27' in text, name
         if name=='missing-input':
-            assert 'missing decision' in text and 'missing request' in text and 'preconditions unmet' in text
+            assert 'missing decision' in text and 'missing request' in text and '## Missing inputs' in text  # reported, not decided (plyn-standard b502e5a)
         else: assert 'Missing inputs' not in text
         spec=importlib.util.spec_from_file_location('checks',tdir/'checks.py')
         checks=importlib.util.module_from_spec(spec);spec.loader.exec_module(checks)
