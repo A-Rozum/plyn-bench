@@ -1,8 +1,8 @@
 - id: mietad:legal.interpol/prepare
   path: method.md
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   applies:
     all:
     - domain: legal.interpol

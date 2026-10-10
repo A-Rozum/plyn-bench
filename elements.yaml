@@ -2,11 +2,11 @@
   path: AGENTS.md
   applies:
     always: true
-  status: active
+  status: užytak
   access: public
-  audience: agent
+  audience: [agent]
   basis:
-    kind: decided
+    kind: rašennie
     date: '2026-10-07'
     ref: accepted by the user during migration
 - id: mietryka:measurement/common-criteria@0.1
@@ -19,9 +19,9 @@
       - measurement
       - design
       - review
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: pakiet:measurement/minimal-base@0.1
   path: bases/minimal/base.md
   applies:
@@ -30,9 +30,9 @@
     - task_kind:
       - measurement
       - design
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: prylada:measurement/run@0.1
   path: bench/run.py
   applies:
@@ -42,9 +42,9 @@
       - implementation
       - maintenance
       - measurement
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: prylada:measurement/health@0.1
   path: bench/health.py
   applies:
@@ -53,9 +53,9 @@
     - task_kind:
       - implementation
       - maintenance
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: resurs:measurement/providers@0.1
   path: providers.yaml
   applies:
@@ -64,9 +64,9 @@
     - task_kind:
       - measurement
       - maintenance
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: tryhier:measurement/bench-dispatch@0.1
   path: .github/workflows/bench.yml
   applies:
@@ -75,18 +75,18 @@
     - task_kind:
       - measurement
       - maintenance
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: tryhier:measurement/weekly-health@0.1
   path: .github/workflows/health.yml
   applies:
     all:
     - *id001
     - task_kind: maintenance
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: zadača.etalon:measurement/core-sep@0.1
   path: tasks/core-sep/task.yaml
   applies:
@@ -96,9 +96,9 @@
       - measurement
       - design
     - subject: core-sep
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   relations:
   - rel: checked_by
     to: pravierka:measurement/core-sep-checks
@@ -111,9 +111,9 @@
       - measurement
       - implementation
     - subject: core-sep
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: zadača.etalon:measurement/meeting-actions@0.1
   path: tasks/meeting-actions/task.yaml
   applies:
@@ -123,9 +123,9 @@
       - measurement
       - design
     - subject: meeting-actions
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   relations:
   - rel: checked_by
     to: pravierka:measurement/meeting-actions-checks
@@ -138,9 +138,9 @@
       - measurement
       - implementation
     - subject: meeting-actions
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: zadača.etalon:measurement/std-classify@0.1
   path: tasks/std-classify/task.yaml
   applies:
@@ -150,9 +150,9 @@
       - measurement
       - design
     - subject: std-classify
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   relations:
   - rel: checked_by
     to: pravierka:measurement/std-classify-checks
@@ -165,9 +165,9 @@
       - measurement
       - implementation
     - subject: std-classify
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: zadača.etalon:measurement/std-leak@0.1
   path: tasks/std-leak/task.yaml
   applies:
@@ -177,9 +177,9 @@
       - measurement
       - design
     - subject: std-leak
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   relations:
   - rel: checked_by
     to: pravierka:measurement/std-leak-checks
@@ -192,14 +192,14 @@
       - measurement
       - implementation
     - subject: std-leak
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: zadača.etalon:measurement/matter-leak@0.1
   path: tasks/matter-leak/task.yaml
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   applies:
     all:
     - domain: measurement
@@ -213,9 +213,9 @@
     to: pravierka:measurement/matter-leak-checks
 - id: pravierka:measurement/matter-leak-checks@0.1
   path: tasks/matter-leak/checks.py
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   applies:
     all:
     - domain: measurement
@@ -226,9 +226,9 @@
     - subject: matter-leak
 - id: zadača.etalon:measurement/missing-input@0.1
   path: tasks/missing-input/task.yaml
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   applies:
     all:
     - domain: measurement
@@ -242,9 +242,9 @@
     to: pravierka:measurement/missing-input-checks
 - id: pravierka:measurement/missing-input-checks@0.1
   path: tasks/missing-input/checks.py
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   applies:
     all:
     - domain: measurement
@@ -255,9 +255,9 @@
     - subject: missing-input
 - id: pravierka:measurement/context@0.1
   path: bench/check_context.py
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   applies:
     all:
     - domain: measurement
@@ -274,9 +274,9 @@
       - measurement
       - design
     - subject: blind-components
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   relations:
   - rel: checked_by
     to: pravierka:measurement/blind-components-checks
@@ -289,9 +289,9 @@
       - measurement
       - implementation
     - subject: blind-components
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
 - id: zadača.etalon:measurement/blind-components-observation@0.1
   path: tasks/blind-components-observation/task.yaml
   applies:
@@ -301,9 +301,9 @@
       - measurement
       - design
     - subject: blind-components-observation
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
   relations:
   - rel: checked_by
     to: pravierka:measurement/blind-components-observation-checks
@@ -316,6 +316,6 @@
       - measurement
       - implementation
     - subject: blind-components-observation
-  status: trial
+  status: proba
   access: public
-  audience: agent
+  audience: [agent]
