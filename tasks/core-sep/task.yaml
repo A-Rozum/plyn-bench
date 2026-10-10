@@ -27,7 +27,7 @@ variants:
   B_norm_plus_impl: 'You work on a CSS framework.
 
 
-    NORM norm:web/proportional-scaling@1 (implemented by core.css): All sizes are
+    NORM norma:web/proportional-scaling@1 (implemented by core.css): All sizes are
     in rem. Never use clamp(), vw or vh for sizes outside core.css. Width/aspect conditions
     (@media) exist only in the regime blocks at the end of core.css; pages never add
     @media. Proportional scaling comes from the root font-size set by the regimes.

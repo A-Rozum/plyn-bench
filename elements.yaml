@@ -9,7 +9,7 @@
     kind: decided
     date: '2026-10-07'
     ref: accepted by the user during migration
-- id: metric:measurement/common-criteria@0.1
+- id: mietryka:measurement/common-criteria@0.1
   path: criteria/common.yaml
   applies:
     all:
@@ -22,7 +22,7 @@
   status: trial
   access: public
   audience: agent
-- id: package:measurement/minimal-base@0.1
+- id: pakiet:measurement/minimal-base@0.1
   path: bases/minimal/base.md
   applies:
     all:
@@ -33,7 +33,7 @@
   status: trial
   access: public
   audience: agent
-- id: tool:measurement/run@0.1
+- id: prylada:measurement/run@0.1
   path: bench/run.py
   applies:
     all:
@@ -45,7 +45,7 @@
   status: trial
   access: public
   audience: agent
-- id: tool:measurement/health@0.1
+- id: prylada:measurement/health@0.1
   path: bench/health.py
   applies:
     all:
@@ -56,7 +56,7 @@
   status: trial
   access: public
   audience: agent
-- id: resource:measurement/providers@0.1
+- id: resurs:measurement/providers@0.1
   path: providers.yaml
   applies:
     all:
@@ -67,7 +67,7 @@
   status: trial
   access: public
   audience: agent
-- id: trigger:measurement/bench-dispatch@0.1
+- id: tryhier:measurement/bench-dispatch@0.1
   path: .github/workflows/bench.yml
   applies:
     all:
@@ -78,7 +78,7 @@
   status: trial
   access: public
   audience: agent
-- id: trigger:measurement/weekly-health@0.1
+- id: tryhier:measurement/weekly-health@0.1
   path: .github/workflows/health.yml
   applies:
     all:
@@ -87,7 +87,7 @@
   status: trial
   access: public
   audience: agent
-- id: benchmark-task:measurement/core-sep@0.1
+- id: zadača.etalon:measurement/core-sep@0.1
   path: tasks/core-sep/task.yaml
   applies:
     all:
@@ -101,8 +101,8 @@
   audience: agent
   relations:
   - rel: checked_by
-    to: check:measurement/core-sep-checks
-- id: check:measurement/core-sep-checks@0.1
+    to: pravierka:measurement/core-sep-checks
+- id: pravierka:measurement/core-sep-checks@0.1
   path: tasks/core-sep/checks.py
   applies:
     all:
@@ -114,7 +114,7 @@
   status: trial
   access: public
   audience: agent
-- id: benchmark-task:measurement/meeting-actions@0.1
+- id: zadača.etalon:measurement/meeting-actions@0.1
   path: tasks/meeting-actions/task.yaml
   applies:
     all:
@@ -128,8 +128,8 @@
   audience: agent
   relations:
   - rel: checked_by
-    to: check:measurement/meeting-actions-checks
-- id: check:measurement/meeting-actions-checks@0.1
+    to: pravierka:measurement/meeting-actions-checks
+- id: pravierka:measurement/meeting-actions-checks@0.1
   path: tasks/meeting-actions/checks.py
   applies:
     all:
@@ -141,7 +141,7 @@
   status: trial
   access: public
   audience: agent
-- id: benchmark-task:measurement/std-classify@0.1
+- id: zadača.etalon:measurement/std-classify@0.1
   path: tasks/std-classify/task.yaml
   applies:
     all:
@@ -155,8 +155,8 @@
   audience: agent
   relations:
   - rel: checked_by
-    to: check:measurement/std-classify-checks
-- id: check:measurement/std-classify-checks@0.1
+    to: pravierka:measurement/std-classify-checks
+- id: pravierka:measurement/std-classify-checks@0.1
   path: tasks/std-classify/checks.py
   applies:
     all:
@@ -168,7 +168,7 @@
   status: trial
   access: public
   audience: agent
-- id: benchmark-task:measurement/std-leak@0.1
+- id: zadača.etalon:measurement/std-leak@0.1
   path: tasks/std-leak/task.yaml
   applies:
     all:
@@ -182,8 +182,8 @@
   audience: agent
   relations:
   - rel: checked_by
-    to: check:measurement/std-leak-checks
-- id: check:measurement/std-leak-checks@0.1
+    to: pravierka:measurement/std-leak-checks
+- id: pravierka:measurement/std-leak-checks@0.1
   path: tasks/std-leak/checks.py
   applies:
     all:
@@ -195,7 +195,7 @@
   status: trial
   access: public
   audience: agent
-- id: benchmark-task:measurement/matter-leak@0.1
+- id: zadača.etalon:measurement/matter-leak@0.1
   path: tasks/matter-leak/task.yaml
   status: trial
   access: public
@@ -210,8 +210,8 @@
     - subject: matter-leak
   relations:
   - rel: checked_by
-    to: check:measurement/matter-leak-checks
-- id: check:measurement/matter-leak-checks@0.1
+    to: pravierka:measurement/matter-leak-checks
+- id: pravierka:measurement/matter-leak-checks@0.1
   path: tasks/matter-leak/checks.py
   status: trial
   access: public
@@ -224,7 +224,7 @@
       - implementation
       - design
     - subject: matter-leak
-- id: benchmark-task:measurement/missing-input@0.1
+- id: zadača.etalon:measurement/missing-input@0.1
   path: tasks/missing-input/task.yaml
   status: trial
   access: public
@@ -239,8 +239,8 @@
     - subject: missing-input
   relations:
   - rel: checked_by
-    to: check:measurement/missing-input-checks
-- id: check:measurement/missing-input-checks@0.1
+    to: pravierka:measurement/missing-input-checks
+- id: pravierka:measurement/missing-input-checks@0.1
   path: tasks/missing-input/checks.py
   status: trial
   access: public
@@ -253,7 +253,7 @@
       - implementation
       - design
     - subject: missing-input
-- id: check:measurement/context@0.1
+- id: pravierka:measurement/context@0.1
   path: bench/check_context.py
   status: trial
   access: public
@@ -265,7 +265,7 @@
       - measurement
       - implementation
       - maintenance
-- id: benchmark-task:measurement/blind-components@0.1
+- id: zadača.etalon:measurement/blind-components@0.1
   path: tasks/blind-components/task.yaml
   applies:
     all:
@@ -279,8 +279,8 @@
   audience: agent
   relations:
   - rel: checked_by
-    to: check:measurement/blind-components-checks
-- id: check:measurement/blind-components-checks@0.1
+    to: pravierka:measurement/blind-components-checks
+- id: pravierka:measurement/blind-components-checks@0.1
   path: tasks/blind-components/checks.py
   applies:
     all:
@@ -292,7 +292,7 @@
   status: trial
   access: public
   audience: agent
-- id: benchmark-task:measurement/blind-components-observation@0.1
+- id: zadača.etalon:measurement/blind-components-observation@0.1
   path: tasks/blind-components-observation/task.yaml
   applies:
     all:
@@ -306,8 +306,8 @@
   audience: agent
   relations:
   - rel: checked_by
-    to: check:measurement/blind-components-observation-checks
-- id: check:measurement/blind-components-observation-checks@0.1
+    to: pravierka:measurement/blind-components-observation-checks
+- id: pravierka:measurement/blind-components-observation-checks@0.1
   path: tasks/blind-components-observation/checks.py
   applies:
     all:

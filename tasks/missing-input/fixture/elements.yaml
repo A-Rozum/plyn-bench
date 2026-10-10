@@ -1,4 +1,4 @@
-- id: method:legal.interpol/prepare
+- id: mietad:legal.interpol/prepare
   path: method.md
   status: trial
   access: public
