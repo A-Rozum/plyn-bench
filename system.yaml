@@ -5,11 +5,11 @@ audience: agent
 description: Measurements — does a shared instruction base improve models over bare models; A/B of design variants. Abstract tasks only.
 packages:
 - id: plyn:standard
-  version: v0.8.0
+  version: v0.9.0
   repo: A-Rozum/plyn-standard
   path: .system
 - id: plyn:tools
-  version: v0.8.1
+  version: v0.9.0
   repo: A-Rozum/plyn-tools
   path: .system/tools
 artifacts:
