@@ -119,7 +119,7 @@ def main():
         cfg = task['context']
         fixture = (tdir / cfg['repo']).resolve()
         if not fixture.is_relative_to(tdir.resolve()): raise ValueError('context fixture must be inside task directory')
-        subprocess.run([sys.executable, str(root / '.system/tools/pn_compile.py'), str(fixture),
+        subprocess.run([sys.executable, str(root / '.system/tools/plyn_compile.py'), str(fixture),
                         *[f'{k}={v}' for k,v in cfg['facets'].items()]], check=True)
         context = (fixture / '.context/task.md').read_text()
     spec = importlib.util.spec_from_file_location("checks", tdir / "checks.py"); checks = importlib.util.module_from_spec(spec); spec.loader.exec_module(checks)
