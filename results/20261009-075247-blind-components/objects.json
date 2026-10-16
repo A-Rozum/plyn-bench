@@ -1,0 +1,20 @@
+{
+ "bucket": "plyn-bench-results",
+ "files": {
+  "raw/zai_glm-4.5-flash-blind-clean-0.txt": {
+   "object": "20261009-075247-blind-components/raw/zai_glm-4.5-flash-blind-clean-0.txt",
+   "size": 6108,
+   "sha1": "8eac5325e0a5273311b12bfd15b46ba7bd39b792"
+  },
+  "raw/zai_glm-4.5-flash-blind-clean-1.txt": {
+   "object": "20261009-075247-blind-components/raw/zai_glm-4.5-flash-blind-clean-1.txt",
+   "size": 67,
+   "sha1": "27d8497631e0547d1d384d60bb625613e23e9745"
+  },
+  "debug.json": {
+   "object": "20261009-075247-blind-components/debug.json",
+   "size": 18081,
+   "sha1": "4ae3605dde7717569aa55ee07c32a4a13cf53e83"
+  }
+ }
+}

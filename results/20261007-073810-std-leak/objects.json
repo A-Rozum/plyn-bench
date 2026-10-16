@@ -1,0 +1,50 @@
+{
+ "bucket": "plyn-bench-results",
+ "files": {
+  "raw/groq_openai_gpt-oss-120b-A_spec-clean-0.txt": {
+   "object": "20261007-073810-std-leak/raw/groq_openai_gpt-oss-120b-A_spec-clean-0.txt",
+   "size": 139,
+   "sha1": "abbbdfe820836970d0b7c5ec0b7ddb9aed1fb945"
+  },
+  "raw/groq_openai_gpt-oss-120b-A_spec-clean-1.txt": {
+   "object": "20261007-073810-std-leak/raw/groq_openai_gpt-oss-120b-A_spec-clean-1.txt",
+   "size": 159,
+   "sha1": "2b5466bf00b8c8b83ee63b9cd1763dd5ea98c5b5"
+  },
+  "raw/groq_openai_gpt-oss-120b-A_spec-clean-2.txt": {
+   "object": "20261007-073810-std-leak/raw/groq_openai_gpt-oss-120b-A_spec-clean-2.txt",
+   "size": 159,
+   "sha1": "2b5466bf00b8c8b83ee63b9cd1763dd5ea98c5b5"
+  },
+  "raw/groq_openai_gpt-oss-120b-A_spec-clean-3.txt": {
+   "object": "20261007-073810-std-leak/raw/groq_openai_gpt-oss-120b-A_spec-clean-3.txt",
+   "size": 139,
+   "sha1": "abbbdfe820836970d0b7c5ec0b7ddb9aed1fb945"
+  },
+  "raw/groq_openai_gpt-oss-120b-B_kernel-clean-0.txt": {
+   "object": "20261007-073810-std-leak/raw/groq_openai_gpt-oss-120b-B_kernel-clean-0.txt",
+   "size": 159,
+   "sha1": "2b5466bf00b8c8b83ee63b9cd1763dd5ea98c5b5"
+  },
+  "raw/groq_openai_gpt-oss-120b-B_kernel-clean-1.txt": {
+   "object": "20261007-073810-std-leak/raw/groq_openai_gpt-oss-120b-B_kernel-clean-1.txt",
+   "size": 159,
+   "sha1": "2b5466bf00b8c8b83ee63b9cd1763dd5ea98c5b5"
+  },
+  "raw/groq_openai_gpt-oss-120b-B_kernel-clean-2.txt": {
+   "object": "20261007-073810-std-leak/raw/groq_openai_gpt-oss-120b-B_kernel-clean-2.txt",
+   "size": 159,
+   "sha1": "2b5466bf00b8c8b83ee63b9cd1763dd5ea98c5b5"
+  },
+  "raw/groq_openai_gpt-oss-120b-B_kernel-clean-3.txt": {
+   "object": "20261007-073810-std-leak/raw/groq_openai_gpt-oss-120b-B_kernel-clean-3.txt",
+   "size": 159,
+   "sha1": "2b5466bf00b8c8b83ee63b9cd1763dd5ea98c5b5"
+  },
+  "debug.json": {
+   "object": "20261007-073810-std-leak/debug.json",
+   "size": 20563,
+   "sha1": "f3aba503e4cab1de3d5c08a76569df9066cf625c"
+  }
+ }
+}

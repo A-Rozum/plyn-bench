@@ -1,0 +1,50 @@
+{
+ "bucket": "plyn-bench-results",
+ "files": {
+  "raw/gemini_gemini-3.5-flash-lite-A_spec-clean-0.txt": {
+   "object": "20261007-073842-std-leak/raw/gemini_gemini-3.5-flash-lite-A_spec-clean-0.txt",
+   "size": 155,
+   "sha1": "9e0605cfa92cbd20ba9b96edc49367b6203fbeb3"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-A_spec-clean-1.txt": {
+   "object": "20261007-073842-std-leak/raw/gemini_gemini-3.5-flash-lite-A_spec-clean-1.txt",
+   "size": 158,
+   "sha1": "f6961d56b69d21e31d358d636973125ca0deae7c"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-A_spec-clean-2.txt": {
+   "object": "20261007-073842-std-leak/raw/gemini_gemini-3.5-flash-lite-A_spec-clean-2.txt",
+   "size": 155,
+   "sha1": "9e0605cfa92cbd20ba9b96edc49367b6203fbeb3"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-A_spec-clean-3.txt": {
+   "object": "20261007-073842-std-leak/raw/gemini_gemini-3.5-flash-lite-A_spec-clean-3.txt",
+   "size": 158,
+   "sha1": "f6961d56b69d21e31d358d636973125ca0deae7c"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-0.txt": {
+   "object": "20261007-073842-std-leak/raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-0.txt",
+   "size": 158,
+   "sha1": "f6961d56b69d21e31d358d636973125ca0deae7c"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-1.txt": {
+   "object": "20261007-073842-std-leak/raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-1.txt",
+   "size": 158,
+   "sha1": "f6961d56b69d21e31d358d636973125ca0deae7c"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-2.txt": {
+   "object": "20261007-073842-std-leak/raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-2.txt",
+   "size": 155,
+   "sha1": "9e0605cfa92cbd20ba9b96edc49367b6203fbeb3"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-3.txt": {
+   "object": "20261007-073842-std-leak/raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-3.txt",
+   "size": 158,
+   "sha1": "f6961d56b69d21e31d358d636973125ca0deae7c"
+  },
+  "debug.json": {
+   "object": "20261007-073842-std-leak/debug.json",
+   "size": 22451,
+   "sha1": "7453228cfc5f29f1ca7c140c9475c3be329e02af"
+  }
+ }
+}

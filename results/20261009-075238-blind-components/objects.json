@@ -1,0 +1,20 @@
+{
+ "bucket": "plyn-bench-results",
+ "files": {
+  "raw/groq_openai_gpt-oss-120b-blind-clean-0.txt": {
+   "object": "20261009-075238-blind-components/raw/groq_openai_gpt-oss-120b-blind-clean-0.txt",
+   "size": 67,
+   "sha1": "27d8497631e0547d1d384d60bb625613e23e9745"
+  },
+  "raw/groq_openai_gpt-oss-120b-blind-clean-1.txt": {
+   "object": "20261009-075238-blind-components/raw/groq_openai_gpt-oss-120b-blind-clean-1.txt",
+   "size": 67,
+   "sha1": "27d8497631e0547d1d384d60bb625613e23e9745"
+  },
+  "debug.json": {
+   "object": "20261009-075238-blind-components/debug.json",
+   "size": 18618,
+   "sha1": "cb9cb27c00cdc78f0812e17c8a0ada79a20bd16e"
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "bucket": "plyn-bench-results",
+ "files": {
+  "raw/gemini_gemini-3.5-flash-lite-blind-clean-0.txt": {
+   "object": "20261009-075255-blind-components-observation/raw/gemini_gemini-3.5-flash-lite-blind-clean-0.txt",
+   "size": 7313,
+   "sha1": "d1c98f527cbc6eebd78563ffa2f4e3d13ea06345"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-blind-clean-1.txt": {
+   "object": "20261009-075255-blind-components-observation/raw/gemini_gemini-3.5-flash-lite-blind-clean-1.txt",
+   "size": 6065,
+   "sha1": "1d3b94f88f77dca49d7a122c7d322007d4b828ef"
+  },
+  "debug.json": {
+   "object": "20261009-075255-blind-components-observation/debug.json",
+   "size": 18740,
+   "sha1": "a328266c2293a97ebda21bb751eb6a88a34cd451"
+  }
+ }
+}

@@ -46,6 +46,13 @@ jobs:
         if: always()
         run: |
           d=results/$(cat results/.current 2>/dev/null) && [ -f "$d/rows.json" ] && python bench/run.py --summarise "$d" || echo "no rows"
+      - name: offload full outputs to B2
+        if: always()
+        env:
+          B2_APPLICATION_KEY_ID: ${{ secrets.B2_APPLICATION_KEY_ID }}
+          B2_APPLICATION_KEY: ${{ secrets.B2_APPLICATION_KEY }}
+        run: |
+          d=results/$(cat results/.current 2>/dev/null) && [ -f "$d/rows.json" ] && python bench/offload.py "$d" || echo "no run to offload"
           rm -f results/.current
       - name: commit results
         if: always()

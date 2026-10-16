@@ -1,0 +1,50 @@
+{
+ "bucket": "plyn-bench-results",
+ "files": {
+  "raw/groq_qwen_qwen3.8-27b-A_spec-clean-0.txt": {
+   "object": "20261007-073806-std-classify/raw/groq_qwen_qwen3.8-27b-A_spec-clean-0.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "raw/groq_qwen_qwen3.8-27b-A_spec-clean-1.txt": {
+   "object": "20261007-073806-std-classify/raw/groq_qwen_qwen3.8-27b-A_spec-clean-1.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "raw/groq_qwen_qwen3.8-27b-A_spec-clean-2.txt": {
+   "object": "20261007-073806-std-classify/raw/groq_qwen_qwen3.8-27b-A_spec-clean-2.txt",
+   "size": 63,
+   "sha1": "2b60620ec5139fb107034439ffe27a0f0daa7450"
+  },
+  "raw/groq_qwen_qwen3.8-27b-A_spec-clean-3.txt": {
+   "object": "20261007-073806-std-classify/raw/groq_qwen_qwen3.8-27b-A_spec-clean-3.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "raw/groq_qwen_qwen3.8-27b-B_kernel-clean-0.txt": {
+   "object": "20261007-073806-std-classify/raw/groq_qwen_qwen3.8-27b-B_kernel-clean-0.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "raw/groq_qwen_qwen3.8-27b-B_kernel-clean-1.txt": {
+   "object": "20261007-073806-std-classify/raw/groq_qwen_qwen3.8-27b-B_kernel-clean-1.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "raw/groq_qwen_qwen3.8-27b-B_kernel-clean-2.txt": {
+   "object": "20261007-073806-std-classify/raw/groq_qwen_qwen3.8-27b-B_kernel-clean-2.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "raw/groq_qwen_qwen3.8-27b-B_kernel-clean-3.txt": {
+   "object": "20261007-073806-std-classify/raw/groq_qwen_qwen3.8-27b-B_kernel-clean-3.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "debug.json": {
+   "object": "20261007-073806-std-classify/debug.json",
+   "size": 18955,
+   "sha1": "d8b976c3a07604d3909df0cabdc72a863022512b"
+  }
+ }
+}

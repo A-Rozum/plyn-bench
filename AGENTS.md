@@ -6,6 +6,6 @@ At the start of a task compile its context and read it instead of browsing: `pyt
 Invariants:
 - Secrets never go into files; provider keys live in repository Secrets.
 - This repository is public: only abstract tasks and public elements.
-- Results are kept (they are measurements); finished plans and one-off tools are deleted.
+- Results are kept (they are measurements): summaries and rows in git, full outputs in B2 (README, Run outputs); finished plans and one-off tools are deleted.
 - Service texts (instructions, specifications, manifests, READMEs, commit messages) are in English; drafts and discussion records in A-Rozum/plyn-lab may be in any language.
 - Every change keeps `python .system/tools/plyn_validate.py . --formats .system/formats` passing.

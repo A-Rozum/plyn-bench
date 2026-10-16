@@ -173,9 +173,9 @@ def summarise(rows, out, run_id):
     for r in rows:
         if not r["error"]:
             groups.setdefault((r["model"], r["condition"], r["start"]), []).append(r)
-    texts = {}
-    for f in (out / "raw").glob("*.txt"):
-        texts[f.stem] = f.read_text()
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+    from offload import fetch
+    texts = fetch(out)
     lines = [f"# Run {run_id}", "", f"Task: {TASK}. Base: {BASE}. Reps: {REPS}.", "",
              "| model | condition | start | n | score | fidelity | boundary | selectivity | cleanliness | convergence | tokens | latency s |",
              "|---|---|---|---|---|---|---|---|---|---|---|---|"]

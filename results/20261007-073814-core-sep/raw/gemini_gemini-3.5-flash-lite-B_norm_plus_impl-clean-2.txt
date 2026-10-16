@@ -1,4 +1,0 @@
-```css
-/* page.css */
-/* Intentionally left blank as per core framework architecture (scaling handled by core.css regimes) */
-```

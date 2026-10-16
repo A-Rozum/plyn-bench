@@ -1,0 +1,50 @@
+{
+ "bucket": "plyn-bench-results",
+ "files": {
+  "raw/groq_openai_gpt-oss-120b-A_one_element-clean-0.txt": {
+   "object": "20261007-073816-core-sep/raw/groq_openai_gpt-oss-120b-A_one_element-clean-0.txt",
+   "size": 44,
+   "sha1": "3e9df2d6451c821186573b150665e8d835c3b0f1"
+  },
+  "raw/groq_openai_gpt-oss-120b-A_one_element-clean-1.txt": {
+   "object": "20261007-073816-core-sep/raw/groq_openai_gpt-oss-120b-A_one_element-clean-1.txt",
+   "size": 44,
+   "sha1": "c6a65e1a7f5ea66db0630825fe5c8788c66da7ef"
+  },
+  "raw/groq_openai_gpt-oss-120b-A_one_element-clean-2.txt": {
+   "object": "20261007-073816-core-sep/raw/groq_openai_gpt-oss-120b-A_one_element-clean-2.txt",
+   "size": 44,
+   "sha1": "c6a65e1a7f5ea66db0630825fe5c8788c66da7ef"
+  },
+  "raw/groq_openai_gpt-oss-120b-A_one_element-clean-3.txt": {
+   "object": "20261007-073816-core-sep/raw/groq_openai_gpt-oss-120b-A_one_element-clean-3.txt",
+   "size": 42,
+   "sha1": "9edeab1417ee342b40a58e5aa63777032e23d3c1"
+  },
+  "raw/groq_openai_gpt-oss-120b-B_norm_plus_impl-clean-0.txt": {
+   "object": "20261007-073816-core-sep/raw/groq_openai_gpt-oss-120b-B_norm_plus_impl-clean-0.txt",
+   "size": 59,
+   "sha1": "d72f4399d25507a59c68fdf109a0038899898fb5"
+  },
+  "raw/groq_openai_gpt-oss-120b-B_norm_plus_impl-clean-1.txt": {
+   "object": "20261007-073816-core-sep/raw/groq_openai_gpt-oss-120b-B_norm_plus_impl-clean-1.txt",
+   "size": 44,
+   "sha1": "c6a65e1a7f5ea66db0630825fe5c8788c66da7ef"
+  },
+  "raw/groq_openai_gpt-oss-120b-B_norm_plus_impl-clean-2.txt": {
+   "object": "20261007-073816-core-sep/raw/groq_openai_gpt-oss-120b-B_norm_plus_impl-clean-2.txt",
+   "size": 44,
+   "sha1": "c6a65e1a7f5ea66db0630825fe5c8788c66da7ef"
+  },
+  "raw/groq_openai_gpt-oss-120b-B_norm_plus_impl-clean-3.txt": {
+   "object": "20261007-073816-core-sep/raw/groq_openai_gpt-oss-120b-B_norm_plus_impl-clean-3.txt",
+   "size": 46,
+   "sha1": "b135eb4ed23a501b26fbe4001704fa51d522a232"
+  },
+  "debug.json": {
+   "object": "20261007-073816-core-sep/debug.json",
+   "size": 20563,
+   "sha1": "f3aba503e4cab1de3d5c08a76569df9066cf625c"
+  }
+ }
+}

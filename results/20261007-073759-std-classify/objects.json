@@ -1,0 +1,50 @@
+{
+ "bucket": "plyn-bench-results",
+ "files": {
+  "raw/gemini_gemini-3.5-flash-lite-A_spec-clean-0.txt": {
+   "object": "20261007-073759-std-classify/raw/gemini_gemini-3.5-flash-lite-A_spec-clean-0.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-A_spec-clean-1.txt": {
+   "object": "20261007-073759-std-classify/raw/gemini_gemini-3.5-flash-lite-A_spec-clean-1.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-A_spec-clean-2.txt": {
+   "object": "20261007-073759-std-classify/raw/gemini_gemini-3.5-flash-lite-A_spec-clean-2.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-A_spec-clean-3.txt": {
+   "object": "20261007-073759-std-classify/raw/gemini_gemini-3.5-flash-lite-A_spec-clean-3.txt",
+   "size": 64,
+   "sha1": "56f37e8514617d7aff47b7c7e581749cf19b617d"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-0.txt": {
+   "object": "20261007-073759-std-classify/raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-0.txt",
+   "size": 64,
+   "sha1": "0d277717c427da784b915d7b0458903e65852626"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-1.txt": {
+   "object": "20261007-073759-std-classify/raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-1.txt",
+   "size": 64,
+   "sha1": "0d277717c427da784b915d7b0458903e65852626"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-2.txt": {
+   "object": "20261007-073759-std-classify/raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-2.txt",
+   "size": 64,
+   "sha1": "0d277717c427da784b915d7b0458903e65852626"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-3.txt": {
+   "object": "20261007-073759-std-classify/raw/gemini_gemini-3.5-flash-lite-B_kernel-clean-3.txt",
+   "size": 64,
+   "sha1": "0d277717c427da784b915d7b0458903e65852626"
+  },
+  "debug.json": {
+   "object": "20261007-073759-std-classify/debug.json",
+   "size": 21751,
+   "sha1": "b146a1213e4aefdcd3aa7e6f27b90ec456d32b86"
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "bucket": "plyn-bench-results",
+ "files": {
+  "raw/groq_qwen_qwen3.8-27b-blind-clean-0.txt": {
+   "object": "20261009-075243-blind-components/raw/groq_qwen_qwen3.8-27b-blind-clean-0.txt",
+   "size": 67,
+   "sha1": "27d8497631e0547d1d384d60bb625613e23e9745"
+  },
+  "raw/groq_qwen_qwen3.8-27b-blind-clean-1.txt": {
+   "object": "20261009-075243-blind-components/raw/groq_qwen_qwen3.8-27b-blind-clean-1.txt",
+   "size": 220,
+   "sha1": "eb520c623a443e908f846e9dc9ab37918f0e4073"
+  },
+  "debug.json": {
+   "object": "20261009-075243-blind-components/debug.json",
+   "size": 19344,
+   "sha1": "13b19a146766ce7ea992653e688271db5c54d5f5"
+  }
+ }
+}

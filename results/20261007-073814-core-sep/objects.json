@@ -1,0 +1,50 @@
+{
+ "bucket": "plyn-bench-results",
+ "files": {
+  "raw/gemini_gemini-3.5-flash-lite-A_one_element-clean-0.txt": {
+   "object": "20261007-073814-core-sep/raw/gemini_gemini-3.5-flash-lite-A_one_element-clean-0.txt",
+   "size": 42,
+   "sha1": "bb546fdda4be0abbea50dce8cce0fdf0d8c0a920"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-A_one_element-clean-1.txt": {
+   "object": "20261007-073814-core-sep/raw/gemini_gemini-3.5-flash-lite-A_one_element-clean-1.txt",
+   "size": 40,
+   "sha1": "af7c8aa20f170f32f27d1048ed6821cd4cde4273"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-A_one_element-clean-2.txt": {
+   "object": "20261007-073814-core-sep/raw/gemini_gemini-3.5-flash-lite-A_one_element-clean-2.txt",
+   "size": 40,
+   "sha1": "af7c8aa20f170f32f27d1048ed6821cd4cde4273"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-A_one_element-clean-3.txt": {
+   "object": "20261007-073814-core-sep/raw/gemini_gemini-3.5-flash-lite-A_one_element-clean-3.txt",
+   "size": 40,
+   "sha1": "af7c8aa20f170f32f27d1048ed6821cd4cde4273"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_norm_plus_impl-clean-0.txt": {
+   "object": "20261007-073814-core-sep/raw/gemini_gemini-3.5-flash-lite-B_norm_plus_impl-clean-0.txt",
+   "size": 40,
+   "sha1": "06c92457f8843bfbf09e5148e09af2d3991a5093"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_norm_plus_impl-clean-1.txt": {
+   "object": "20261007-073814-core-sep/raw/gemini_gemini-3.5-flash-lite-B_norm_plus_impl-clean-1.txt",
+   "size": 25,
+   "sha1": "86e9cdce0f7dc1ba55fcc27601d393d4c4583c4a"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_norm_plus_impl-clean-2.txt": {
+   "object": "20261007-073814-core-sep/raw/gemini_gemini-3.5-flash-lite-B_norm_plus_impl-clean-2.txt",
+   "size": 129,
+   "sha1": "6ac142ca8842cfc77c363f9febee6a5985829c42"
+  },
+  "raw/gemini_gemini-3.5-flash-lite-B_norm_plus_impl-clean-3.txt": {
+   "object": "20261007-073814-core-sep/raw/gemini_gemini-3.5-flash-lite-B_norm_plus_impl-clean-3.txt",
+   "size": 42,
+   "sha1": "bb546fdda4be0abbea50dce8cce0fdf0d8c0a920"
+  },
+  "debug.json": {
+   "object": "20261007-073814-core-sep/debug.json",
+   "size": 21751,
+   "sha1": "ac1e5a9518be01b1a2c9d1640c7edc1f6852c361"
+  }
+ }
+}
