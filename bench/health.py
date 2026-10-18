@@ -23,12 +23,12 @@ for name, cfg in providers.items():
             try:
                 ids = [m["id"] for m in run.http(p["base"] + "/models", h=run.headers(p)).get("data", [])]
                 pick = [i for i in ids if any(k in i for k in ("nemotron", "llama-4", "gpt-oss", "qwen3", "mistral"))][:12]
-                note += " — available e.g.: " + ", ".join(pick or ids[:12])
+                note += " – available e.g.: " + ", ".join(pick or ids[:12])
             except Exception:
                 pass
     exp = cfg.get("expires")
     if exp and (datetime.date.fromisoformat(str(exp)) - datetime.date.today()).days < 21:
-        note += f" — quota expires {exp}"
+        note += f" – quota expires {exp}"
     lines.append(f"| {name} | {cfg['model']} | {status} | {time.time() - t0:.1f} | {note} |")
     time.sleep(2)
 (root / "results" / "health.md").write_text("\n".join(lines) + "\n")

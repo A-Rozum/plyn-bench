@@ -2,14 +2,14 @@ id: plyn:bench
 kind: bench
 access: public
 audience: [agent]
-description: Measurements — does a shared instruction base improve models over bare models; A/B of design variants. Abstract tasks only.
+description: Measurements – does a shared instruction base improve models over bare models; A/B of design variants. Abstract tasks only.
 packages:
 - id: plyn:standard
-  version: v0.15.6
+  version: v0.15.7
   repo: A-Rozum/plyn-standard
   path: .system
 - id: plyn:tools
-  version: v0.15.8
+  version: v0.15.9
   repo: A-Rozum/plyn-tools
   path: .system/tools
 artifacts:

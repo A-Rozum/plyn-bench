@@ -6,7 +6,7 @@ prompt: 'A system is developing in which people and AI agents jointly do profess
   different components such a system needs in order to keep improving? For each component,
   describe what happens to the system if it is removed. Are there components that
   work only all together, but not in pairs? Separately: what is the nature of observation
-  in such a system — is it a component of its own, or something else?'
+  in such a system – is it a component of its own, or something else?'
 notes: ''
 starts:
   clean: ''

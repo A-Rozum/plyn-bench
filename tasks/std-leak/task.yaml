@@ -1,6 +1,6 @@
 id: std-leak
 prompt: Turn these notes into a list of action items, one per line, in the form "-
-  Owner — action — due date". Nothing else.
+  Owner – action – due date". Nothing else.
 notes: 'Quick sync notes: Anna sends the draft to the printer by Friday. Ben books
   the room for the launch, next Tuesday. Also Ben checks the catering offer by Thursday.
   The weather was lovely.'
