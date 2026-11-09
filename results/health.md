@@ -1,12 +1,12 @@
-# Provider health 2026-11-07 23:42 UTC
+# Provider health 2026-11-09 15:12 UTC
 
 | provider | model | status | latency s | note |
 |---|---|---|---|---|
-| gemini | gemini-3.5-flash-lite | ok | 0.6 |  |
-| openrouter | nvidia/nemotron-3-super-120b-a12b:free | error | 0.5 | HTTP 404: b'{"error":{"message":"This model is unavailable for free. The paid version is a – available e.g.: nvidia/nemotron-3.5-super-vl, nvidia/nemotron-3.5-super-vl:free, mistralai/mistral-large-4-0, qwen/qwen3.8-max-prime, qwen/qwen3.8-omni-flash, qwen/qwen3.8-max-0902, qwen/qwen3.8-flash, qwen/qwen3.8-27b, qwen/qwen3.8-27b:batch, qwen/qwen3.8-2.4t-a95b, nvidia/nemotron-3.5-lightning, nvidia/nemotron-3.5-lightning:free |
-| zai | glm-4.5-flash | ok | 5.0 |  |
-| groq | openai/gpt-oss-120b | ok | 0.3 |  |
-| cohere | command-a-03-2025 | ok | 2.5 |  |
-| qwen | qwen-plus-character | ok | 1.4 |  |
+| gemini | gemini-3.5-flash-lite | ok | 0.5 |  |
+| openrouter | nvidia/nemotron-3-super-120b-a12b:free | error | 0.9 | HTTP 404: b'{"error":{"message":"This model is unavailable for free. The paid version is a – available e.g.: nvidia/nemotron-3.5-super-vl, nvidia/nemotron-3.5-super-vl:free, mistralai/mistral-large-4-0, qwen/qwen3.8-max-prime, qwen/qwen3.8-omni-flash, qwen/qwen3.8-max-0902, qwen/qwen3.8-max-0902:batch, qwen/qwen3.8-flash, qwen/qwen3.8-27b, qwen/qwen3.8-27b:batch, qwen/qwen3.8-2.4t-a95b, nvidia/nemotron-3.5-lightning |
+| zai | glm-4.5-flash | ok | 8.1 |  |
+| groq | openai/gpt-oss-120b | ok | 0.4 |  |
+| cohere | command-a-03-2025 | ok | 0.4 |  |
+| qwen | qwen-plus-character | ok | 1.5 |  |
 | hf | openai/gpt-oss-20b | error | 0.2 | HTTP 402: b'{"error":"Purchase pre-paid credits to continue using Inference Providers. Alt |
-| nvidia | nvidia/llama-3.1-nemotron-ultra-253b-v1 | error | 0.3 | HTTP 404: b'{"status":404,"title":"Not Found","detail":"Function \'84bf12ff-edbd-4435-baea – available e.g.: mistralai/codestral-22b-instruct-v0.1, mistralai/mistral-7b-instruct-v0.3, mistralai/mistral-large, mistralai/mistral-large-2-instruct, mistralai/mistral-large-4-1t-a52b, mistralai/mixtral-8x22b-v0.1, nv-mistralai/mistral-nemo-12b-instruct, nvidia/llama-3.1-nemotron-51b-instruct, nvidia/llama-3.1-nemotron-70b-instruct, nvidia/llama-3.1-nemotron-safety-guard-8b-v3, nvidia/llama-3.1-nemotron-ultra-253b-v1, nvidia/llama-nemotron-embed-vl-1b-v2 |
+| nvidia | nvidia/llama-3.1-nemotron-ultra-253b-v1 | error | 0.4 | HTTP 404: b'{"status":404,"title":"Not Found","detail":"Function \'84bf12ff-edbd-4435-baea – available e.g.: mistralai/codestral-22b-instruct-v0.1, mistralai/mistral-7b-instruct-v0.3, mistralai/mistral-large, mistralai/mistral-large-2-instruct, mistralai/mistral-large-4-1t-a52b, mistralai/mixtral-8x22b-v0.1, nv-mistralai/mistral-nemo-12b-instruct, nvidia/llama-3.1-nemotron-51b-instruct, nvidia/llama-3.1-nemotron-70b-instruct, nvidia/llama-3.1-nemotron-safety-guard-8b-v3, nvidia/llama-3.1-nemotron-ultra-253b-v1, nvidia/llama-nemotron-embed-vl-1b-v2 |
